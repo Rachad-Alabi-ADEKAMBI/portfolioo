@@ -1,49 +1,43 @@
-/*general*/
-
-body{
-  
-    font-size: 1.5rem;
-    z-index: 0;
+/* -------import fonts ------*/
+@font-face {
+    font-family: newfont;
+    src: url("fonts/Quicksand-VariableFont_wght.ttf");
 }
 
 
+body, html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: newfont;
+    font-size: 1.1em;
+    z-index: 0;
 
+
+}
+
+
+#container{
+    box-sizing: border-box;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.box{
+    margin: 10px auto 10px auto;
+}
+
+/*  ----- header  ---- */
 header{
     display: flex;
     padding: 5px;
     flex-direction: row;
-    align-items: center;
+    text-align: center;
     width: 80vw;
     margin: 10px auto 10px auto;
 }
-
-h1, h2{
-    color: purple;
-    text-align: center;
- }
-
-
-button{
-    border: 1px black solid;
-    border-radius: 90px 90px 90px 90px;
-    width: 110px;
-    height: 40px;
-    padding: 10px;
-    font-size: 0.8em;
-    margin-top: 10px;
-    color: red;
-   
-}
-footer{ 
-    text-align: center;
-}
-
-
-ul {
-    list-style-type: none;
-  }
-
- /* elements*/
 
 #general-informations{
     flex: 2;
@@ -61,32 +55,75 @@ ul {
     margin-left: 5px;
 }
 
-.contact-me{
+#contact-me{
     flex: 1;
     float: right;
     text-align: center;
+    margin: auto;
 }
+
 
 #button-contact{
     width: 150px;
     height: 50px;
     color: red;
 }
-
-
-.menu-box{
-    width: 80vw;
-    margin: 10px auto 10px auto;
-}
-
-.menu{
+h1, h2{
+    color: purple;
     text-align: center;
-    display: flex;
-    flex-direction: wrap;
-    justify-content: space-between;
-    width: 60vw;
-    margin: 10px auto 10px auto;
+ }
+
+
+button{
+    border: 1px black solid;
+    border-radius: 90px 90px 90px 90px;
+    width: 110px;
+    height: 40px;
+    padding: 10px;
+    font-size: 0.8em;
+    margin-top: 10px;
+    color: red;
+   
 }
+
+
+/*---- menu ------  */
+nav{
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 10px;
+ 
+}
+ul li{
+    text-decoration: none;
+}
+nav ul{
+   padding: 0;
+   text-align: center;
+   margin: 0;
+
+  }
+
+  nav ul li{
+      display: inline-block;
+      padding: 20px;
+  }
+
+  nav ul li a{
+      text-decoration: none;
+      color: blue;
+      
+  }
+
+
+
+
+
+
+
+
+
 
 .personal-informations{
     width: 75vw;
@@ -106,12 +143,15 @@ ul {
 
 .profile-text{
     width: 80%;
-    margin: auto;
+    margin: 4vh auto;
+    line-height: 30px;
+    text-align: justify;
+    
 }
 
 .skills{
     flex: 1;
-    margin: auto;
+    margin: 20px auto;
     text-align: center;
 }  
 
@@ -135,11 +175,10 @@ ul {
 
 
 .portfolio-slider{
-    width: 500px;
+    flex: 1;
     height: 400px;
     overflow: hidden;
-    flex: 1;
-    margin:auto;
+    margin: auto;
 }
 
 
@@ -147,26 +186,32 @@ ul {
     0%{
         transform: translateX(-250px);
     }
-    20%{
-        transform: translateX(-750px);
+    15%{
+        transform: translateX(-500px);
     }
-    40%{
+    30%{
         transform: translateX(-1000px);
     }
-    60%{
+    45%{
         transform: translateX(-1500px);
     }
-    80%{
+    60%{
         transform: translateX(-2000px);
     }
+    75%{
+        transform: translateX(-2250px);
+    }
+    95%{
+        transform: translateX(-2550px);
+    }
     100%{
-        transform: translateX(-500px);
+        transform: translateX(-2000px);
     }
 }
 
 .slides{
-    width: 2500px;
-    animation: slide-effect 10s infinite;
+    width: 3000px;
+    animation: slide-effect 13s infinite;
 
 }
 
@@ -175,7 +220,7 @@ width: 100%;
 }
 
 
-.work-experience{
+#work-experience{
     width: 80vw;
     margin: 10px auto auto auto;
     justify-content: center;
@@ -219,3 +264,136 @@ textarea{
     height: 100px;
     vertical-align: top;
 }
+
+footer{ 
+    text-align: center;
+}
+
+
+/*responsive for medium screens*/
+
+@media screen and (max-width: 768px){
+    h1{
+        font-size: 1.4em;
+    }
+    nav ul li{
+        padding: 5px;
+    }
+
+   header{
+       width: 100vw;
+   }
+
+   #general-informations{
+        width:80vw;
+        margin: 10px auto auto auto;
+        text-align: center;
+       
+   }
+
+   .contact-me{
+        width: 20vw;
+   }
+
+    .personal-informations{
+        width: 100vw;
+}
+
+
+   #portfolio{
+        width: 100vw;
+        display: flex;
+        padding: 0px;
+}
+
+
+    .portfolio-list{
+        text-align: center;
+        flex: 1;
+        margin: auto;
+        width: 50vw;
+}
+
+
+    .portfolio-slider{
+        flex: 1;
+        height: 400px;
+        overflow: hidden;
+        margin: auto;
+        width: 50vw;
+}
+
+    #work-experience{
+        width: 100vw;
+}
+
+   .work-experience-text{
+        width: 80%;
+}
+
+
+    .contact{
+        width: 100vw;;
+}
+}
+
+/*responsive for small screens*/
+@media screen and (max-width: 576px){
+    header{
+        width: 100vw;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    #button-contact{
+        margin: auto;
+    }
+
+    nav ul li{
+      padding: 5px;
+  }
+
+  .personal-informations{
+      width: 100vw;
+      margin: 0;
+      flex-direction: column;
+  }
+
+  .profile{
+      flex: 1;
+      width: 100vw;
+      padding: auto;
+      margin: 0;
+      border: 1px red solid;
+  }
+
+  .skills{
+      display: flex;
+      flex-direction: row ;
+      padding: 15px;
+      width: 100vw;
+      margin: 0;
+      text-align: center;
+  }
+
+  #portfolio{
+      width: 100vw;
+      margin: 0;
+      flex-direction: column;
+      padding: 0;
+  }
+
+  .portfolio-list{
+      width: 100vw;
+      margin: 0;
+  }
+
+  .portfolio-slider{
+      margin: 0;
+  }
+
+  #work-experience{
+      width: 100vw;
+      margin: 0;
+  }
+} 
