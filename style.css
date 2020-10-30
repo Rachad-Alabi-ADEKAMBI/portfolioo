@@ -4,7 +4,6 @@
     src: url("fonts/Quicksand-VariableFont_wght.ttf");
 }
 
-
 body, html{
     box-sizing: border-box;
     margin: 0;
@@ -12,10 +11,7 @@ body, html{
     font-family: newfont;
     font-size: 1.1em;
     z-index: 0;
-
-
 }
-
 
 #container{
     box-sizing: border-box;
@@ -25,11 +21,6 @@ body, html{
     padding: 10px;
 }
 
-.box{
-    margin: 10px auto 10px auto;
-}
-
-/*  ----- header  ---- */
 header{
     display: flex;
     padding: 5px;
@@ -62,7 +53,6 @@ header{
     margin: auto;
 }
 
-
 #button-contact{
     width: 150px;
     height: 50px;
@@ -73,7 +63,6 @@ h1, h2{
     text-align: center;
  }
 
-
 button{
     border: 1px black solid;
     border-radius: 90px 90px 90px 90px;
@@ -83,7 +72,6 @@ button{
     font-size: 0.8em;
     margin-top: 10px;
     color: red;
-   
 }
 
 
@@ -93,16 +81,20 @@ nav{
     width: 100%;
     z-index: 1;
     margin-bottom: 10px;
+    position: relative;
  
 }
-ul li{
-    text-decoration: none;
+
+nav.scroll{
+   background-color: rgba(147, 147, 187, 0.9);
+    position: fixed;
+    margin-top: 0;
 }
+
 nav ul{
    padding: 0;
    text-align: center;
    margin: 0;
-
   }
 
   nav ul li{
@@ -112,18 +104,12 @@ nav ul{
 
   nav ul li a{
       text-decoration: none;
-      color: blue;
-      
+      color: blue;      
   }
 
-
-
-
-
-
-
-
-
+  ul{
+    list-style-type: none;
+  }
 
 .personal-informations{
     width: 75vw;
@@ -146,7 +132,6 @@ nav ul{
     margin: 4vh auto;
     line-height: 30px;
     text-align: justify;
-    
 }
 
 .skills{
@@ -212,11 +197,10 @@ nav ul{
 .slides{
     width: 3000px;
     animation: slide-effect 13s infinite;
-
 }
 
 .slide{
-width: 100%;
+    width: 100%;
 }
 
 
@@ -257,7 +241,6 @@ label{
 input, textarea{
     width: 60%;
     box-sizing: border-box;
-    
 }
 
 textarea{
@@ -270,8 +253,7 @@ footer{
 }
 
 
-/*responsive for medium screens*/
-
+/* medium screens*/
 @media screen and (max-width: 768px){
     h1{
         font-size: 1.4em;
@@ -279,7 +261,7 @@ footer{
     nav ul li{
         padding: 5px;
     }
-
+    
    header{
        width: 100vw;
    }
@@ -287,8 +269,7 @@ footer{
    #general-informations{
         width:80vw;
         margin: 10px auto auto auto;
-        text-align: center;
-       
+        text-align: center; 
    }
 
    .contact-me{
@@ -297,23 +278,20 @@ footer{
 
     .personal-informations{
         width: 100vw;
-}
-
+    }
 
    #portfolio{
         width: 100vw;
         display: flex;
         padding: 0px;
-}
-
+    }
 
     .portfolio-list{
         text-align: center;
         flex: 1;
         margin: auto;
         width: 50vw;
-}
-
+    }
 
     .portfolio-slider{
         flex: 1;
@@ -321,23 +299,22 @@ footer{
         overflow: hidden;
         margin: auto;
         width: 50vw;
-}
+    }
 
     #work-experience{
         width: 100vw;
-}
+    }
 
    .work-experience-text{
         width: 80%;
-}
-
+    }
 
     .contact{
         width: 100vw;;
-}
+    }
 }
 
-/*responsive for small screens*/
+/*small screens*/
 @media screen and (max-width: 576px){
     header{
         width: 100vw;
@@ -350,50 +327,79 @@ footer{
     }
 
     nav ul li{
-      padding: 5px;
-  }
+        padding: 5px;
+    }
 
-  .personal-informations{
+    nav.scroll{
+        display: none;
+    }
+    
+    .personal-informations{
+        width: 100vw;
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .profile{
+        width: 100vw;
+         padding: auto;
+        margin: 0;
+        border: 1px red solid;
+        text-align: center;
+    }
+
+    .profile-text{
+        width: 90vw;
+    }
+
+   .skills{
+        display: flex;
+        flex-direction: row;
+        padding: 15px;
+        width: 100vw;
+        margin: 0;
+        text-align: center;
+    }
+
+    #programming-lang{
+        margin-left: 10px;
+    }
+
+    #spoken-lang{
+        margin-right: 10px;
+    }
+
+    #portfolio{
+        width: 100vw;
+        margin: auto;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .portfolio-list{
       width: 100vw;
-      margin: 0;
-      flex-direction: column;
-  }
+      margin: 0; 
+    }
 
-  .profile{
-      flex: 1;
-      width: 100vw;
-      padding: auto;
-      margin: 0;
-      border: 1px red solid;
-  }
+    .portfolio-slider{
+        width: 100%;
+    }
 
-  .skills{
-      display: flex;
-      flex-direction: row ;
-      padding: 15px;
-      width: 100vw;
-      margin: 0;
-      text-align: center;
-  }
+    #work-experience{
+        width: 100vw;
+    }
 
-  #portfolio{
-      width: 100vw;
-      margin: 0;
-      flex-direction: column;
-      padding: 0;
-  }
+    .work-experience-text{
+        width: 90%;
+        margin: auto;
+    }
 
-  .portfolio-list{
-      width: 100vw;
-      margin: 0;
-  }
+    #contact{
+        width: 100vw;
+        margin: auto;
+    }
 
-  .portfolio-slider{
-      margin: 0;
-  }
-
-  #work-experience{
-      width: 100vw;
-      margin: 0;
-  }
-} 
+    .contact-form{
+        width: 90%;
+    }   
+}
