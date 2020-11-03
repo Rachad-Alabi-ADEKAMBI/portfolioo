@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div id="container">
+    <div class="container">
              <header>
                   <!-- general informations-->
                     <div id="general-informations">
@@ -37,28 +37,28 @@
             </header>
 
             <!--menu-->
-            <nav id="box" class="box">
+            <nav class="box">
                 <ul class="menu">
-                    <li class="menu-link"><a href="#profile">Qui suis je ?</a></li>
+                    <li class="menu-link"><a href="#profile-text">Qui suis je ?</a></li>
                     <li class="menu-link"><a href="#skills">Mes compétences</a></li>
                     <li class="menu-link"><a href="#portfolio">Mon portfolio</a></li>
                     <li class="menu-link"><a href="#work-experience">Mes expériences professionnelles</a></li>
                 </ul>
             </nav>
-      
+
             <!--profile & skills-->
             <div class="personal-informations">
                 <!--profile-->
                 <div class="profile">
                     <h2>Qui suis je ?</h2>
-                    <div class="profile-text">
+                    <div class="profile-text" id="#profile-text">
                         Bonjour, moi c'est Rachad, je suis développeur web full stack junior en fin de formation. Je travaille parallèlement en freelance
                         afin de gagner un peu plus d'expérience. Je fais toujours le nécessaire pour éffectuer rapidement et éfficacement les tâches qui me sont confiées.
                         Mes hobbies sont la les jeux vidéo et la lecture, je propose d'ailleurs régulièrement des traductions sur <a href="https://fr.quora.com/profile/Rachad-Adekambi">Quora</a>
                     .</div>    
                 </div>
                 <!--skills-->
-                <div class="skills">
+                <div class="skills" id="skills">
                     <div id="programming-lang">
                         <h2>Compétences</h2>    
                         <ul>
@@ -73,12 +73,11 @@
                         <ul>
                             <li>Français</li>
                             <li>Anglais</li>
-                            </ul>
+                        </ul>
                     </div>
                 </div>
             </div>
     
-
             <!-- portfolio-->
             <div id="portfolio">
                 <!--portfolio list-->
@@ -109,12 +108,12 @@
             <div id="work-experience">
                 <div class="work-experience-text">
                 <h2>Expériences professionnelles</h2>
-                    Actuellement en freelance sur <a href="https://5euros.com/profil/codeur-creatif">5euros</a> et <a href="https://www.fiverr.com/codeur_creatif">fiverr</a>.
-                    J'ai aussi participé à quelques projets de groupe, voici un <a href="https://github.com/CodeurCreatif">lien</a> vers mon <stong>github</stong>.
-                    Egalement titulaire d'un baccalauréat en marketing et actions commerciales j'ai effectué un stage au service clientèle de ECOBANK BENIN 
-                    et ai ensuite travaillé en tant que commercial au sein de AHVIC SARL. Ces différentes expériences m'ont permis de développer mon sens de l'assistance au 
-                    client et du travail en équipe.          
-                </div>
+                        Je travaille en freelance sur des plateformes comme <a href="https://5euros.com/profil/codeur-creatif">5euros</a>. 
+                        J'ai aussi developpé quelques projets lors de ma formation. Voici un <a href="https://github.com/CodeurCreatif">lien</a> 
+                        vers mon github. Egalement titulaire d'un baccalauréat en marketing et actions commerciales j'ai effectué un stage au 
+                        service clientèle de ECOBANK BENIN et ai ensuite travaillé en tant que commercial au sein de AHVIC SARL. Ces 
+                        différentes expériences m'ont permis de comprendre à quel point le client est important pour l'entreprise et aussi de 
+                        développer ma capacité à travailller en équipe.
             </div>
 
             <!--contact-->
@@ -140,9 +139,7 @@
             </div>
 
     <!--footer-->
-    <footer>
-        <p>codé par <a href="#">adekambi Rachad</a></p>
-    </footer>
+  
 
     <!--  javascript-->
     <script>
@@ -155,7 +152,12 @@
                menu.classList.remove("scroll")
             }
         });
+
+       
     </script>
     </div>
+    <footer>
+        <p>codé par <a href="#">adekambi Rachad</a></p>
+    </footer>
     </body>
     </html>

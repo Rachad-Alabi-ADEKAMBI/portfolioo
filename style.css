@@ -5,16 +5,16 @@
 }
 
 body, html{
-    box-sizing: border-box;
+    width: 100%;
     margin: 0;
     padding: 0;
-    font-family: newfont;
+    font-family: newfont, arial;
     font-size: 1.1em;
     z-index: 0;
 }
 
-#container{
-    box-sizing: border-box;
+.container{
+    width: 100%;
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -74,7 +74,6 @@ button{
     color: red;
 }
 
-
 /*---- menu ------  */
 nav{
     top: 0;
@@ -82,7 +81,10 @@ nav{
     z-index: 1;
     margin-bottom: 10px;
     position: relative;
- 
+}
+
+.responsive-menu{
+    color: darkgreen;
 }
 
 nav.scroll{
@@ -102,15 +104,21 @@ nav ul{
       padding: 20px;
   }
 
+  nav ul li:hover{
+    background-color: rgba(000, 112, 192, 0.25);
+    border-radius: 90px 90px 90px 90px;
+  }
+
   nav ul li a{
       text-decoration: none;
       color: blue;      
   }
 
-  ul{
+  li{
     list-style-type: none;
   }
 
+/*personal informations */
 .personal-informations{
     width: 75vw;
     margin: auto;
@@ -134,12 +142,14 @@ nav ul{
     text-align: justify;
 }
 
+/*skills*/
 .skills{
     flex: 1;
     margin: 20px auto;
     text-align: center;
 }  
 
+/*portfolio*/
 #portfolio{
     width: 1020px;
     margin: 10px auto auto auto;
@@ -157,15 +167,12 @@ nav ul{
     margin: auto;
 }
 
-
-
 .portfolio-slider{
     flex: 1;
     height: 400px;
     overflow: hidden;
     margin: auto;
 }
-
 
 @keyframes slide-effect{
     0%{
@@ -203,7 +210,6 @@ nav ul{
     width: 100%;
 }
 
-
 #work-experience{
     width: 80vw;
     margin: 10px auto auto auto;
@@ -212,8 +218,11 @@ nav ul{
 }
 
 .work-experience-text{
-    width: 60%;
     margin: 5px auto 5px auto;
+    width: 60%;
+    margin: 4vh auto;
+    line-height: 30px;
+    text-align: justify;
 }
 
 .contact{
@@ -250,8 +259,10 @@ textarea{
 
 footer{ 
     text-align: center;
+    background-color: rgba(147, 147, 187, 0.9);
+    margin-bottom: 0;
+    
 }
-
 
 /* medium screens*/
 @media screen and (max-width: 768px){
@@ -317,34 +328,56 @@ footer{
 /*small screens*/
 @media screen and (max-width: 576px){
     header{
-        width: 100vw;
+        width: 100%;
         flex-direction: column;
         margin: 0;
+        text-align: center;
+    }
+
+    #general-informations{
+        flex-direction: row;
+        flex: 1;
+    }
+
+    .pic{
+        margin-left: 5px;
+    }
+
+    .infos{
+        width: 100%;
     }
 
     #button-contact{
         margin: auto;
     }
 
-    nav ul li{
-        padding: 5px;
-    }
-
-    nav.scroll{
+    nav{
         display: none;
     }
+   
+    nav ul{
+       padding: 0;
+       text-align: center;
+       margin: 0;   
+      }
     
+      nav ul li{
+          display: inline-block;
+          padding: 20px;
+          text-align: center;
+          width: 100%;
+      }
+     
     .personal-informations{
-        width: 100vw;
+        width: 100%;
         margin: 0;
         flex-direction: column;
     }
 
     .profile{
-        width: 100vw;
+        width: 100%;
          padding: auto;
         margin: 0;
-        border: 1px red solid;
         text-align: center;
     }
 
@@ -356,7 +389,7 @@ footer{
         display: flex;
         flex-direction: row;
         padding: 15px;
-        width: 100vw;
+        width: 100%;
         margin: 0;
         text-align: center;
     }
@@ -370,14 +403,14 @@ footer{
     }
 
     #portfolio{
-        width: 100vw;
+        width: 100%;
         margin: auto;
         flex-direction: column;
         padding: 0;
     }
 
     .portfolio-list{
-      width: 100vw;
+      width: 100%;
       margin: 0; 
     }
 
@@ -386,7 +419,7 @@ footer{
     }
 
     #work-experience{
-        width: 100vw;
+        width: 100%;
     }
 
     .work-experience-text{
@@ -395,11 +428,17 @@ footer{
     }
 
     #contact{
-        width: 100vw;
+        width: 100%;
         margin: auto;
     }
 
     .contact-form{
         width: 90%;
-    }   
+    }
+    .responsive-menu{
+        display: inline-block;
+        width: 100%;
+        background-color: brown;
+        border: 1px black solid;
+    }
 }
