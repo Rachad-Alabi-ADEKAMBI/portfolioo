@@ -43,7 +43,15 @@ header{
 
 .infos{
     width: 60%;
-    margin-left: 5px;
+    text-align: center;
+}
+
+h1{
+     margin: auto;
+}
+
+.infos ul{
+    width: 100%;
 }
 
 #contact-me{
@@ -83,10 +91,6 @@ nav{
     position: relative;
 }
 
-.responsive-menu{
-    color: darkgreen;
-}
-
 nav.scroll{
    background-color: rgba(147, 147, 187, 0.9);
     position: fixed;
@@ -120,7 +124,7 @@ nav ul{
 
 /*personal informations */
 .personal-informations{
-    width: 75vw;
+    width: 75%;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -159,7 +163,6 @@ nav ul{
     flex-direction: row;
     padding: 10px;
 }
-
 
 .portfolio-list{
     text-align: center;
@@ -210,6 +213,7 @@ nav ul{
     width: 100%;
 }
 
+/*work-experience*/
 #work-experience{
     width: 80vw;
     margin: 10px auto auto auto;
@@ -220,11 +224,41 @@ nav ul{
 .work-experience-text{
     margin: 5px auto 5px auto;
     width: 60%;
-    margin: 4vh auto;
+    margin: auto;
     line-height: 30px;
     text-align: justify;
 }
 
+/*testimony*/
+#testimony{
+    display: flex;
+    flex-direction: column;  
+    padding: 0;
+}
+
+.testimony-box{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.testimony-box1{
+   float: left;
+   text-align: center;
+   margin: 0 15px 10px auto;
+   line-height: 30px;
+}
+
+.testimony-box2{
+    float: right;
+    text-align: center;
+    margin: 0 auto 10px 15px;
+    line-height: 30px;
+}
+
+/*contact*/
 .contact{
     width: 80%;
     margin: 60px auto auto auto;
@@ -244,7 +278,8 @@ label{
     display:inline-block;
     width: 90px;
     text-align: right;
-    padding: 10px;
+    padding: 7px;
+    margin: 0 auto;
 }
 
 input, textarea{
@@ -278,21 +313,21 @@ footer{
    }
 
    #general-informations{
-        width:80vw;
-        margin: 10px auto auto auto;
-        text-align: center; 
+        width:100%;
+        margin: 10px auto;
+       
    }
 
    .contact-me{
-        width: 20vw;
+        width: 20%;
    }
 
     .personal-informations{
-        width: 100vw;
+        width: 100%;
     }
 
    #portfolio{
-        width: 100vw;
+        width: 100%;
         display: flex;
         padding: 0px;
     }
@@ -301,7 +336,7 @@ footer{
         text-align: center;
         flex: 1;
         margin: auto;
-        width: 50vw;
+        width: 50%;
     }
 
     .portfolio-slider{
@@ -309,11 +344,11 @@ footer{
         height: 400px;
         overflow: hidden;
         margin: auto;
-        width: 50vw;
+        width: 50%;
     }
 
     #work-experience{
-        width: 100vw;
+        width: 100%;
     }
 
    .work-experience-text{
@@ -321,7 +356,7 @@ footer{
     }
 
     .contact{
-        width: 100vw;;
+        width: 100%;
     }
 }
 
@@ -335,59 +370,53 @@ footer{
     }
 
     #general-informations{
-        flex-direction: row;
-        flex: 1;
+        flex-direction: column;
     }
 
     .pic{
-        margin-left: 5px;
+        margin: auto;
     }
 
     .infos{
+        margin: auto;
         width: 100%;
     }
 
+    ul, ul li{
+        margin: 5px;
+        width: 100%;
+        padding: 5px;
+    }
+
     #button-contact{
-        margin: auto;
+        margin: 30px auto 10px auto;
     }
 
     nav{
         display: none;
-    }
-   
-    nav ul{
-       padding: 0;
-       text-align: center;
-       margin: 0;   
-      }
-    
-      nav ul li{
-          display: inline-block;
-          padding: 20px;
-          text-align: center;
-          width: 100%;
       }
      
     .personal-informations{
         width: 100%;
-        margin: 0;
+        margin: auto ;
         flex-direction: column;
     }
 
     .profile{
         width: 100%;
-         padding: auto;
-        margin: 0;
+        padding: auto;
+        margin: 10px auto;
         text-align: center;
     }
 
     .profile-text{
-        width: 90vw;
+        width: 90%;
     }
 
    .skills{
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         padding: 15px;
         width: 100%;
         margin: 0;
@@ -404,22 +433,28 @@ footer{
 
     #portfolio{
         width: 100%;
-        margin: auto;
+        margin-bottom: 40px;
         flex-direction: column;
         padding: 0;
     }
 
     .portfolio-list{
-      width: 100%;
-      margin: 0; 
+      display: inline-block;
+      width: 80%;
+      margin: auto;
+      text-align: center;
     }
 
     .portfolio-slider{
-        width: 100%;
+        width: 90%;
+        margin: auto;
+        height: 400px;
+        overflow: auto;
     }
 
     #work-experience{
         width: 100%;
+        margin: auto 0;
     }
 
     .work-experience-text{
@@ -434,11 +469,7 @@ footer{
 
     .contact-form{
         width: 90%;
-    }
-    .responsive-menu{
-        display: inline-block;
-        width: 100%;
-        background-color: brown;
-        border: 1px black solid;
-    }
+        margin: 0 auto 10px auto;
+        padding: 10px;
+    }   
 }
