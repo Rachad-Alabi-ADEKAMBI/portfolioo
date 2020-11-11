@@ -26,20 +26,24 @@ ul li{
 
 /*---- menu ------  */
 nav{
-    background-color: #0082e6;
-    height: 100px;
+    background-color: #f785ed;
+    height: 70px;
     width: 100%;
-    margin: 0;
+    margin: auto;
 }
 
 nav ul{
     float: right;
     width: 80%;
+    text-align: center;
+    margin: auto;
+     
 }
 
 nav ul li{
     display: inline-block;
     line-break: 80px;
+    margin: 15px;
 }
 
 a{
@@ -48,7 +52,7 @@ a{
 
 nav ul li a{
     color: white;
-    font-size: 17px;
+    font-size: 1.05em;
     border: 3;
     text-transform: uppercase;
 }
@@ -56,6 +60,11 @@ nav ul li a{
 a.active, a:hover{
     background: #1b9bff;
     transition: .5s;
+    font-weight: bold;
+    margin: 90px;
+    border: 1px rgb(247, 134, 247) solid;
+    border-radius: 90px;
+    height: 30px;
 }
 
 .checkbtn{
@@ -245,7 +254,7 @@ button{
 }
 
 #work-experience a{
-    color: purple;
+    color: #f785ed;
     text-decoration: none;
 }
 
