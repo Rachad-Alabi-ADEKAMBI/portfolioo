@@ -1,538 +1,561 @@
 /* -------import fonts ------*/
 @font-face {
-    font-family: newfont;
-    src: url("fonts/Quicksand-VariableFont_wght.ttf");
+  font-family: newfont;
+  src: url("fonts/Quicksand-VariableFont_wght.ttf");
 }
 
-body, html{
-    width: 100%;
-    font-family: newfont, arial;
-    font-size: 1.1em;
-    z-index: 0;
+body,
+html {
+  width: 100%;
+  font-family: newfont, arial;
+  font-size: 1.1em;
+  line-height: 30px;
 }
 
-.container{
-    box-sizing: border-box;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin: auto;
+.container {
+  box-sizing: border-box;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: auto;
 }
 
-ul li{
-    list-style: none;
+ul li {
+  list-style: none;
 }
 
 /*---- menu ------  */
-nav{
-    background-color: #f785ed;
-    height: 70px;
-    width: 100%;
-    margin: auto;
+nav {
+  background-color: #8ebaff;
+  height: 50px;
+  width: 100%;
+  margin: 15px auto;
 }
 
-nav ul{
-    float: right;
-    width: 80%;
-    text-align: center;
-    margin: auto;
-     
+nav ul {
+  float: right;
+  width: 80%;
+  text-align: center;
+  margin: auto;
 }
 
-nav ul li{
-    display: inline-block;
-    line-break: 80px;
-    margin: 15px;
+nav ul li {
+  display: inline-block;
+  line-break: 80px;
+  margin: 15px;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
+  color: #6087ff;
 }
 
-nav ul li a{
-    color: white;
-    font-size: 1.05em;
-    border: 3;
-    text-transform: uppercase;
+nav ul li a {
+  color: white;
+  font-size: 1.05em;
+  border: 3;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
-a.active, a:hover{
-    background: #1b9bff;
-    transition: .5s;
-    font-weight: bold;
-    margin: 90px;
-    border: 1px rgb(247, 134, 247) solid;
-    border-radius: 90px;
-    height: 30px;
+nav ul li a.active,
+nav ul li a:hover {
+  background: #6087ff;
+  transition: 0.5s;
+  margin: 20px;
 }
 
-.checkbtn{
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
 }
-#check{
-    display: none;
+#check {
+  display: none;
 }
-
-
 
 /*header*/
-header{
-    display: flex;
-    padding: 5px;
-    flex-direction: row;
-    width: 60vw;
-    margin: 10px auto 10px auto;
-    justify-content: space-between;
-    text-align: left;
-    
+header {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  margin: 20px auto 10px auto;
+  justify-content: space-between;
+  text-align: left;
 }
 
-.pic{
-    
+h1 {
+  text-align: left;
+  margin-top: 5px;
 }
 
-
-
-h1{
-     margin: auto;
-     text-align: left;
+.infos ul {
+  width: 100%;
+  text-align: left;
+  margin-top: 15px;
+}
+.infos ul li {
+  text-align: left;
 }
 
-.infos ul{
-    width: 100%;
-    text-align: left;
-}
-.infos ul li{
-    text-align: left;
-}
-
-#contact-me{
-    flex: 1;
-    float: right;
-    text-align: center;
-    margin: auto;
+#contact-me {
+  flex: 1;
+  float: right;
+  text-align: center;
+  margin: auto;
 }
 
-#button-contact{
-    width: 150px;
-    height: 50px;
-    color: red;
+#button-contact {
+  width: 150px;
+  height: 50px;
 }
-h1, h2{
-    color: purple;
-    text-align: center;
-    margin: auto;
- }
 
- .infos{
-     text-align: left;
- }
+.infos {
+  text-align: left;
+  margin-top: 40px;
+}
 
-button{
-    border: 1px black solid;
-    border-radius: 90px;
-    width: 110px;
-    height: 40px;
-    padding: 10px;
-    font-size: 0.8em;
-    margin-top: 10px;
-    color: red;
+h1,
+h2 {
+  color: #6087ff;
+  text-align: center;
+  margin: auto;
+}
+
+.infos-list {
+  margin-top: 40px;
+}
+
+button {
+  border: 1px #6087ff solid;
+  border-radius: 90px;
+  width: 110px;
+  height: 40px;
+  padding: 10px;
+  font-size: 1em;
+  margin-top: 10px;
+  color: #6087ff;
 }
 
 /*personal informations */
-.personal-informations{
-    width: 75%;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    padding: auto;
+.personal-informations {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: auto;
 }
 
-.profile{
-    flex: 3;
-    padding: 10px;
-    text-align: center;
-    margin: auto;
+.profile {
+  flex: 3;
+  padding: 10px;
+  text-align: center;
+  margin: auto;
 }
 
-.profile-text{
-    width: 80%;
-    margin: 4vh auto;
-    line-height: 30px;
-    text-align: justify;
+.profile-text {
+  width: 80%;
+  margin: 4vh auto;
+  line-height: 30px;
+  text-align: justify;
 }
 
 /*skills*/
-.skills{
-    flex: 1;
-    margin: 20px auto;
-    text-align: center;
-}  
-
-/*portfolio*/
-#portfolio{
-    width: 1020px;
-    margin: 10px auto auto auto;
-    text-align: center;
-    height:500px;
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
+.skills {
+  flex: 1;
+  margin: 20px auto;
+  text-align: center;
 }
 
-.portfolio-list{
+/*portfolio*/
+#portfolio {
+  width: 1020px;
+  margin: 10px auto auto auto;
+  text-align: center;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.portfolio-list {
+  text-align: center;
+  flex: 1;
+  margin: auto;
+}
+
+div div ul li {
+  text-align: justify;
+}
+div div ul li a {
+  color: black;
+}
+
+.portfolio-slider {
+  flex: 1;
+  height: 500px;
+  overflow: hidden;
+  margin: auto;
+}
+
+@keyframes slide-effect {
+  0% {
+    transform: translateX(-250px);
+  }
+  15% {
+    transform: translateX(-500px);
+  }
+  30% {
+    transform: translateX(-1000px);
+  }
+  45% {
+    transform: translateX(-1500px);
+  }
+  60% {
+    transform: translateX(-2000px);
+  }
+  75% {
+    transform: translateX(-2250px);
+  }
+  95% {
+    transform: translateX(-2550px);
+  }
+  100% {
+    transform: translateX(-2000px);
+  }
+}
+
+.slides {
+  width: 3000px;
+  animation: slide-effect 13s infinite;
+}
+
+.slide {
+  width: 100%;
+}
+
+/*work-experience*/
+#work {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.work-experience {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+}
+.work-experience-title {
+  margin: 5px auto;
+}
+
+.work-experience-text {
+  margin: 15px auto 5px auto;
+  width: 100%;
+  text-align: justify;
+}
+
+.work-experience-text a {
+  color: #7c7eff;
+}
+
+/*testimonies*/
+#testimonies {
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+  width: 35%;
+}
+
+.testimonies-boxes {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonies-box {
+  text-align: justify;
+  margin: 5px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.testimonies-box a {
+  color: #7c7eff;
+}
+
+/*githutb*/
+#github {
+  width: 90%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.github-text {
+  margin: 15px auto;
+  text-align: center;
+}
+
+.github-text a {
+  color: #6087ff;
+}
+/*contact*/
+#contact {
+  width: 80%;
+  margin: 60px auto;
+  text-align: center;
+  align-content: center;
+}
+
+.contact-form {
+  margin: 10px auto auto auto;
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+}
+
+#name,
+#mail {
+  width: 60vw;
+  box-sizing: border-box;
+  margin: 7px;
+  font-size: 1.1em;
+}
+
+textarea {
+  width: 60vw;
+  height: 150px;
+  font-size: 1.2em;
+  vertical-align: top;
+}
+
+.button-submit {
+  margin: 15px auto;
+  font-weight: bold;
+}
+
+footer {
+  bottom: 0;
+  background-color: #8ebaff;
+  color: blue;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  margin: auto;
+}
+
+/* medium screens*/
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.4em;
+  }
+  nav ul li {
+    padding: 5px;
+  }
+
+  header {
+    width: 100vw;
+  }
+
+  #general-informations {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .contact-me {
+    width: 20%;
+  }
+
+  .personal-informations {
+    width: 100%;
+  }
+
+  #portfolio {
+    width: 100%;
+    display: flex;
+    padding: 0px;
+  }
+
+  .portfolio-list {
     text-align: center;
     flex: 1;
     margin: auto;
-}
+    width: 50%;
+  }
 
-.portfolio-slider{
+  .portfolio-slider {
     flex: 1;
     height: 400px;
     overflow: hidden;
     margin: auto;
-}
+    width: 50%;
+  }
 
-@keyframes slide-effect{
-    0%{
-        transform: translateX(-250px);
-    }
-    15%{
-        transform: translateX(-500px);
-    }
-    30%{
-        transform: translateX(-1000px);
-    }
-    45%{
-        transform: translateX(-1500px);
-    }
-    60%{
-        transform: translateX(-2000px);
-    }
-    75%{
-        transform: translateX(-2250px);
-    }
-    95%{
-        transform: translateX(-2550px);
-    }
-    100%{
-        transform: translateX(-2000px);
-    }
-}
-
-.slides{
-    width: 3000px;
-    animation: slide-effect 13s infinite;
-}
-
-.slide{
+  #work-experience {
     width: 100%;
-}
+  }
 
-/*work-experience*/
-#work-experience{
-    width: 80vw;
-    margin: 10px auto 20px auto;
-    justify-content: center;
-    text-align: center;
-}
-
-.work-experience-text{
-    margin: 5px auto 5px auto;
-    width: 60%;
-    margin: auto;
-    line-height: 30px;
-    text-align: justify;
-}
-
-#work-experience a{
-    color: #f785ed;
-    text-decoration: none;
-}
-
-/*testimony*/
-#testimony{
-    display: flex;
-    flex-direction: column;  
-    padding: 0;
-    margin: 30px auto;
-}
-
-.testimony-box{
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0;
-}
-
-.testimony-box1{
-   float: left;
-   text-align: center;
-   margin: 0 15px 10px auto;
-   line-height: 30px;
-}
-
-.testimony-box2{
-    float: right;
-    text-align: center;
-    margin: 0 auto 10px 15px;
-    line-height: 30px;
-}
-
-/*contact*/
-#contact{
+  .work-experience-text {
     width: 80%;
-    margin: 60px auto;
-    text-align: center;
-    align-content: center;
-}
+  }
 
-.contact-form{
-    margin: 10px auto auto auto;    
+  .contact {
     width: 100%;
-    padding: 1em;
-    border-radius: 90px 90 px 90px 90px;
-    text-align: center;
-}
-
-
-#name, #mail{
-    width: 60vw;
-    box-sizing: border-box;
-    margin: 7px;
-    font-size: 1.1em;
-}
-
-textarea{
-    width: 60vw;
-    height: 100px;
-    font-size: 1.2em;
-    vertical-align: top;
-}
-
-footer{ 
-    bottom: 0;
-    position: absolute;
-    text-align: center;
-}
-
-
-footer a{
-    color: purple;
-    
-
-/* medium screens*/
-@media screen and (max-width: 768px){
-    h1{
-        font-size: 1.4em;
-    }
-    nav ul li{
-        padding: 5px;
-    }
-    
-   header{
-       width: 100vw;
-   }
-
-   #general-informations{
-        width:100%;
-        margin: 10px auto;
-       
-   }
-
-   .contact-me{
-        width: 20%;
-   }
-
-    .personal-informations{
-        width: 100%;
-    }
-
-   #portfolio{
-        width: 100%;
-        display: flex;
-        padding: 0px;
-    }
-
-    .portfolio-list{
-        text-align: center;
-        flex: 1;
-        margin: auto;
-        width: 50%;
-    }
-
-    .portfolio-slider{
-        flex: 1;
-        height: 400px;
-        overflow: hidden;
-        margin: auto;
-        width: 50%;
-    }
-
-    #work-experience{
-        width: 100%;
-    }
-
-   .work-experience-text{
-        width: 80%;
-    }
-
-    .contact{
-        width: 100%;
-    }
+  }
 }
 
 /*small screens*/
-@media screen and (max-width: 576px){
-    header{
-        width: 100%;
-        flex-direction: column;
-        margin: 0;
-        text-align: center;
-    }
-    .checkbtn{
-        display: block;
-    }
+@media screen and (max-width: 576px) {
+  header {
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+  }
+  .checkbtn {
+    display: block;
+  }
 
-    nav{
-        width: 100%;
-        margin: auto;
-    }
-    
-   nav ul{
-        width: 50%;
-        height: 27vh;
-        background: #2c3e50;
-        top: 80px;
-        transition: all .5s;
-        display: none;
-        position: fixed;
-        float: left;
-        margin: auto;
-        padding: auto;
+  nav {
+    width: 100%;
+    margin: auto;
+  }
 
-     }
-   
-    nav ul li{
-        display: block;
-        line-height: 30px;
-        margin: auto;
-        padding: auto;
-    }
+  nav ul {
+    width: 50%;
+    height: 27vh;
+    background: #2c3e50;
+    top: 80px;
+    transition: all 0.5s;
+    display: none;
+    position: fixed;
+    float: left;
+    margin: auto;
+    padding: auto;
+  }
 
-    nav ul li a{
-        font-size: 20px;
-    }
+  nav ul li {
+    display: block;
+    line-height: 30px;
+    margin: auto;
+    padding: auto;
+  }
 
-    a:hover,a.active{
-        background: none;
-        color: #0082e6;
-    }
+  nav ul li a {
+    font-size: 20px;
+  }
 
-    #check:checked ~ ul{
-        right: 0;
-        display: inline-block;
-    }
-    #general-informations{
-        flex-direction: column;
-    }
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+  }
 
-    .pic{
-        margin: auto;
-    }
+  #check:checked ~ ul {
+    right: 0;
+    display: inline-block;
+  }
+  #general-informations {
+    flex-direction: column;
+  }
 
-    .infos{
-        margin: auto;
-        width: 100%;
-    }
+  .pic {
+    margin: auto;
+  }
 
-    #button-contact{
-        margin: 30px auto 10px auto;
-    }
+  .infos {
+    margin: auto;
+    width: 100%;
+  }
 
-    .personal-informations{
-        width: 100%;
-        margin: auto ;
-        flex-direction: column;
-    }
+  #button-contact {
+    margin: 30px auto 10px auto;
+  }
 
-    .profile{
-        width: 100%;
-        padding: auto;
-        margin: 10px auto;
-        text-align: center;
-    }
+  .personal-informations {
+    width: 100%;
+    margin: auto;
+    flex-direction: column;
+  }
 
-    .profile-text{
-        width: 90%;
-    }
+  .profile {
+    width: 100%;
+    padding: auto;
+    margin: 10px auto;
+    text-align: center;
+  }
 
-   .skills{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 15px;
-        width: 100%;
-        margin: 0;
-        text-align: center;
-    }
+  .profile-text {
+    width: 90%;
+  }
 
-    #programming-lang{
-        margin-left: 10px;
-    }
+  .skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
 
-    #spoken-lang{
-        margin-right: 10px;
-    }
+  #programming-lang {
+    margin-left: 10px;
+  }
 
-    #portfolio{
-        width: 100%;
-        margin-bottom: 40px;
-        flex-direction: column;
-        padding: 0;
-    }
+  #spoken-lang {
+    margin-right: 10px;
+  }
 
-    .portfolio-list{
-      display: inline-block;
-      width: 80%;
-      margin: auto;
-      text-align: center;
-    }
+  #portfolio {
+    width: 100%;
+    margin-bottom: 40px;
+    flex-direction: column;
+    padding: 0;
+  }
 
-    .portfolio-slider{
-        width: 90%;
-        margin: auto;
-        height: 400px;
-        overflow: auto;
-    }
+  .portfolio-list {
+    display: inline-block;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
 
-    #work-experience{
-        width: 100%;
-        margin: auto 0;
-    }
+  .portfolio-slider {
+    width: 90%;
+    margin: auto;
+    height: 400px;
+    overflow: auto;
+  }
 
-    .work-experience-text{
-        width: 90%;
-        margin: auto;
-    }
+  #work-experience {
+    width: 100%;
+    margin: auto 0;
+  }
 
-    #contact{
-        width: 100%;
-        margin: auto;
-    }
+  .work-experience-text {
+    width: 90%;
+    margin: auto;
+  }
 
-    .contact-form{
-        width: 90%;
-        margin: 0 auto 10px auto;
-        padding: 10px;
-    }   
+  #contact {
+    width: 100%;
+    margin: auto;
+  }
+
+  .contact-form {
+    width: 90%;
+    margin: 0 auto 10px auto;
+    padding: 10px;
+  }
 }
