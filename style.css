@@ -1,24 +1,20 @@
-/* -------import fonts ------*/
-@font-face {
-  font-family: newfont;
-  src: url("fonts/Quicksand-VariableFont_wght.ttf");
-}
-
 body,
 html {
   width: 100%;
-  font-family: newfont, arial;
+  font-family: "raleway", "sans-serif";
   font-size: 1.1em;
   line-height: 30px;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .container {
-  box-sizing: border-box;
   min-height: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: auto;
+  margin: 0;
+  width: 100%;
 }
 
 ul li {
@@ -30,12 +26,11 @@ nav {
   background-color: #8ebaff;
   height: 50px;
   width: 100%;
-  margin: 15px auto;
+  margin: 0 0 auto 0;
 }
 
 nav ul {
-  float: right;
-  width: 80%;
+  width: 100%;
   text-align: center;
   margin: auto;
 }
@@ -89,6 +84,10 @@ header {
   text-align: left;
 }
 
+.pic {
+  margin: 35px auto;
+}
+
 h1 {
   text-align: left;
   margin-top: 5px;
@@ -104,7 +103,6 @@ h1 {
 }
 
 #contact-me {
-  flex: 1;
   float: right;
   text-align: center;
   margin: auto;
@@ -125,6 +123,7 @@ h2 {
   color: #6087ff;
   text-align: center;
   margin: auto;
+  width: auto;
 }
 
 .infos-list {
@@ -153,7 +152,6 @@ button {
 }
 
 .profile {
-  flex: 3;
   padding: 10px;
   text-align: center;
   margin: auto;
@@ -175,65 +173,68 @@ button {
 
 /*portfolio*/
 #portfolio {
-  width: 1020px;
-  margin: 10px auto auto auto;
+  width: 900px;
+  margin: 10px auto;
   text-align: center;
-  height: 500px;
+  height: 400px;
   display: flex;
   flex-direction: row;
   padding: 10px;
 }
 
 .portfolio-list {
-  text-align: center;
-  flex: 1;
+  width: 300px;
+  text-align: left;
   margin: auto;
 }
 
 div div ul li {
-  text-align: justify;
+  text-align: j ustify;
 }
 div div ul li a {
   color: black;
 }
 
 .portfolio-slider {
-  flex: 1;
-  height: 500px;
+  width: 300px;
+  height: 400px;
   overflow: hidden;
   margin: auto;
 }
 
 @keyframes slide-effect {
   0% {
-    transform: translateX(-250px);
+    transform: translateX(0);
   }
-  15% {
+  12.5% {
     transform: translateX(-500px);
   }
-  30% {
+  25% {
     transform: translateX(-1000px);
   }
-  45% {
+  37.5% {
     transform: translateX(-1500px);
   }
-  60% {
+  50% {
     transform: translateX(-2000px);
+  }
+  62.5% {
+    transform: translateX(-2500px);
   }
   75% {
-    transform: translateX(-2250px);
+    transform: translateX(-3000px);
   }
-  95% {
-    transform: translateX(-2550px);
+  87.5% {
+    transform: translateX(-3250px);
   }
   100% {
-    transform: translateX(-2000px);
+    transform: translateX(-3250px);
   }
 }
 
 .slides {
-  width: 3000px;
-  animation: slide-effect 13s infinite;
+  width: calc(500px * 8);
+  animation: slide-effect 20s infinite;
 }
 
 .slide {
@@ -253,7 +254,7 @@ div div ul li a {
   width: 70%;
   display: flex;
   flex-direction: column;
-  margin: 50px auto;
+  margin: 30px auto;
 }
 .work-experience-title {
   margin: 5px auto;
@@ -355,7 +356,11 @@ footer a {
 }
 
 /* medium screens*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+  header {
+    width: 100%;
+  }
+
   h1 {
     font-size: 1.4em;
   }
@@ -368,7 +373,7 @@ footer a {
   }
 
   #general-informations {
-    width: 100%;
+    width: 90%;
     margin: 10px auto;
   }
 
@@ -377,13 +382,14 @@ footer a {
   }
 
   .personal-informations {
-    width: 100%;
+    width: 90%;
   }
 
   #portfolio {
-    width: 100%;
+    width: 90%;
     display: flex;
     padding: 0px;
+    margin: auto;
   }
 
   .portfolio-list {
@@ -398,15 +404,24 @@ footer a {
     height: 400px;
     overflow: hidden;
     margin: auto;
-    width: 50%;
+    width: 45%;
   }
 
   #work-experience {
-    width: 100%;
+    width: autoa;
+    margin: 30px auto;
   }
 
   .work-experience-text {
     width: 80%;
+  }
+
+  #testimonies {
+    margin: 30px auto;
+  }
+
+  .testimonies-title {
+    margin: 10px auto;
   }
 
   .contact {
@@ -414,8 +429,24 @@ footer a {
   }
 }
 
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%;
+  }
+}
+
 /*small screens*/
 @media screen and (max-width: 576px) {
+  .container {
+    margin: 0;
+    width: 100%;
+  }
+
+  nav {
+    width: 100%;
+    margin: 0;
+  }
+
   header {
     width: 100%;
     flex-direction: column;
@@ -426,20 +457,15 @@ footer a {
     display: block;
   }
 
-  nav {
-    width: 100%;
-    margin: auto;
-  }
-
   nav ul {
     width: 50%;
-    height: 27vh;
-    background: #2c3e50;
+    height: 30vh;
+    background: #6087ff;
     top: 80px;
     transition: all 0.5s;
     display: none;
     position: fixed;
-    float: left;
+    float: right;
     margin: auto;
     padding: auto;
   }
@@ -461,8 +487,11 @@ footer a {
     color: #0082e6;
   }
 
+  header {
+    width: 90%;
+  }
+
   #check:checked ~ ul {
-    right: 0;
     display: inline-block;
   }
   #general-informations {
@@ -474,7 +503,7 @@ footer a {
   }
 
   .infos {
-    margin: auto;
+    margin: 0;
     width: 100%;
   }
 
@@ -501,34 +530,33 @@ footer a {
 
   .skills {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     padding: 15px;
-    width: 100%;
-    margin: 0;
     text-align: center;
   }
 
   #programming-lang {
-    margin-left: 10px;
+    margin: auto;
   }
 
   #spoken-lang {
-    margin-right: 10px;
+    margin: auto;
   }
 
   #portfolio {
-    width: 100%;
-    margin-bottom: 40px;
+    width: 300px;
+    height: 600px;
+    margin: auto auto 60px auto;
     flex-direction: column;
     padding: 0;
   }
 
   .portfolio-list {
     display: inline-block;
-    width: 80%;
+    width: 90%;
     margin: auto;
-    text-align: center;
+    text-align: left;
   }
 
   .portfolio-slider {
@@ -538,24 +566,46 @@ footer a {
     overflow: auto;
   }
 
-  #work-experience {
+  #work {
+    flex-direction: column;
     width: 100%;
-    margin: auto 0;
+    margin-bottom: 10px;
+  }
+
+  .work-experience {
+    width: 100%;
   }
 
   .work-experience-text {
     width: 90%;
-    margin: auto;
+    text-align: justify;
+    margin: 20px auto;
+  }
+
+  #testimonies {
+    width: 95%;
+    margin: 10px auto;
   }
 
   #contact {
-    width: 100%;
+    width: 90%;
     margin: auto;
   }
 
   .contact-form {
-    width: 90%;
+    width: 95%;
     margin: 0 auto 10px auto;
     padding: 10px;
+  }
+
+  #name,
+  #mail,
+  textarea {
+    width: 95%;
+  }
+
+  footer {
+    width: 100%;
+    margin: auto;
   }
 }
