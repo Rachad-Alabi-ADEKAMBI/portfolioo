@@ -14,7 +14,7 @@
     <meta name="robots" content="index, follow" />
     <!-- css-->
     <link rel="stylesheet" type="text/css" href="style.css" />
-
+    
     <!--font awesome-->
     <script
       src="https://kit.fontawesome.com/b14771b76e.js"
@@ -46,14 +46,17 @@
     <div class="container">
       <!--menu-->
       <nav>
-        <ul >
+      <div class="openMenu"><i class="fa fa-bars"></i> </div>
+        <ul class="mainMenu">
           <li><a href="#personal-informations">Qui suis je ?</a></li>
           <li><a href="#skills">Mes compétences</a></li>
           <li><a href="#portfolio">Mon portfolio</a></li>
           <li><a href="#work">Parcours professionnel</a></li>
-          <li><a href="cv-adekambi-rachad.pdf">Téléchargez mon cv</a></li>
+          <li><a href="cv-adekambi-rachad.pdf">Télécharger mon cv</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <div class="closeMenu"><i class="fa fa-times"></i></div>
         </ul>
-      </nav>
+      </div>
       <!--header-->
       <header>
         <div class="pic">
@@ -67,25 +70,16 @@
 
         <div class="infos">
           <h1>ADEKAMBI Rachad Alabi</h1>
-          <ul class="infos-list">
-            <li>
-              <i class="fas fa-code"></i>
+          <p><i class="fas fa-code"></i>
               <strong>Développeur web</strong>
-            </li>
-            <li class="icons">
-              <a href="https://www.linkedin.com/in/rachad-alabi-adekambi-2753a21b5/"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://github.com/Rachad-Alabi-ADEKAMBI"><i class="fab fa-github"></i></a>
-               <a href="#"><i class="far fa-envelope"></i></a>
-               <a href="https://hub.docker.com/u/rachadadekambi"><i class="fab fa-docker"></i></a>
+          </p>
+          <div class="icons">
+            <a href="https://www.linkedin.com/in/rachad-alabi-adekambi-2753a21b5/"><i class="fab fa-linkedin-in"></i></a>
+             <a href="https://github.com/Rachad-Alabi-ADEKAMBI"><i class="fab fa-github"></i></a>
+             <a href="https://hub.docker.com/u/rachadadekambi"><i class="fab fa-docker"></i></a>
                <a href="https://codepen.io/Codeur_creatif"><i class="fab fa-codepen"></i></a>
-          </li>
-          </ul>
-        </div>
-
-        <div id="contact-me">
-          <a href="#contact"
-            ><button id="button-contact">Contactez moi</button></a
-          >
+               <a href="#"><i class="far fa-envelope"></i></a>
+          </div>
         </div>
       </header>
 
@@ -238,7 +232,7 @@
           <a href="https://github.com/Rachad-Alabi-ADEKAMBI" target="_blank"
             >GitHub</a
           ></p>
-          <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+          <scrip src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></scrip>
         </p>
 
         <div class="calendar"></div>
@@ -286,5 +280,9 @@
       <!--footer-->
       <footer>codé par <a href="#">Adekambi Rachad</a></footer>
     </div>
+
+     <!--javascript-->
+    <script src="./app.js"></script>
+
   </body>
 </html>
