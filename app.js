@@ -1,15 +1,12 @@
-const mainMenu = document.querySelector(".mainMenu");
-const closeMenu = document.querySelector(".closeMenu");
-const openMenu = document.querySelector(".openMenu");
+var content = document.querySelector("#hamburger-content");
+var sidebarBody = document.querySelector("#hamburger-sidebar-body");
+var button = document.querySelector("hamburger-btn");
+var overlay = document.querySelector("hamburger-overlay");
+var activatedClass = "hamburger-activated";
 
-openMenu.addEventListener("click", show);
-closeMenu.addEventListener("click", close);
+sidebarBody.innerHTML = content.innerHTML;
 
-function show() {
-  mainMenu.style.display = "flex";
-  mainMenu.style.top = "0";
-}
-
-function close() {
-  mainMenu.style.top = "-100%";
-}
+button.addEventListener("click", function (e) {
+  e.preventDefault;
+  console.log(this.parentNode);
+});

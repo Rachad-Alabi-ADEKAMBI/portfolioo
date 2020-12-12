@@ -21,47 +21,88 @@ ul li {
   list-style: none;
 }
 
-/*---- menu ------  */
-nav {
-  background-color: #35acf7;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-}
-
-nav .mainMenu {
-  display: flex;
-  list-style: none;
-}
-
-nav .mainMenu li a {
-  display: inline-block;
-  padding: 15px;
+a {
   text-decoration: none;
-  text-transform: uppercase;
-  color: white;
-  font-size: 1.3rem;
 }
 
-nav .mainMenu li a:hover {
-  background-color: rgb(255, 94, 0);
+/*---- menu ------  */
+#hamburger,
+#hamburger-content {
+  display: inline;
 }
 
-nav .openMenu {
-  font-size: 2rem;
-  margin: 20px;
-  display: none;
+#hamburger-button {
   cursor: pointer;
-}
-
-nav .mainMenu .closeMenu {
-  font: 2rem;
-  cursor: pointer;
+  background-color: none;
+  border: none;
+  font-size: 30px;
+  padding: 0;
+  vertical-align: top;
+  line-height: 60px;
+  float: right;
+  margin-right: 32px;
   display: none;
 }
 
-/*header*/
-header {
+#hamburger-overlay {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#hamburger-sidebar {
+  display: none;
+  position: fixed;
+  width: 84%;
+  z-index: 20;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  transform: translateX(-100%);
+  transition: transform 2s ease-out;
+}
+
+#hamburger-sidebar li {
+  display: block;
+}
+
+#hamburger-sidebar-header {
+  background-color: purple;
+  height: 128px;
+}
+#hamburger-sidebar-body {
+  padding: 16px 8px;
+}
+
+#hamburger-sidebar-body li:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  border: 1px white solid;
+  margin-right: 16px;
+  margin-bottom: 4px;
+}
+
+#hamburger-sidebar-body .button {
+  float: none;
+  display: block;
+  text-align: center;
+  margin-top: 16px;
+  height: auto;
+  padding: 10px;
+  line-height: inherit;
+}
+
+/*infos*/
+.infos {
   display: flex;
   flex-direction: row;
   width: 60%;
@@ -83,7 +124,7 @@ header {
   color: blue;
 }
 
-.infos {
+.text {
   text-align: left;
   margin-top: 40px;
 }
@@ -94,21 +135,6 @@ h2 {
   text-align: center;
   margin: auto;
   width: auto;
-}
-
-.infos-list {
-  margin-top: 40px;
-}
-
-button {
-  border: 1px #6087ff solid;
-  border-radius: 90px;
-  width: 110px;
-  height: 40px;
-  padding: 10px;
-  font-size: 1em;
-  margin-top: 10px;
-  color: #6087ff;
 }
 
 /*personal informations */
@@ -328,41 +354,14 @@ footer a {
 
 /* medium screens*/
 @media screen and (max-width: 1024px) {
-  nav .mainMenu {
-    height: 100vh;
-    position: fixed;
-    position: relative;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 10;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    background-color: rgb(113, 210, 240);
-    transition: top 1s ease;
+  /*menu*/
+  #hamburger-content {
     display: none;
   }
 
-  nav .mainMenu .closeMenu {
+  #hamburger-button,
+  #hamburger-sidebar {
     display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-
-  nav .openMenu {
-    display: block;
-  }
-
-  nav .mainMenu li a:hover {
-    background-color: none;
-    color: rgb(255, 123, 0);
-    font-size: 1.6rem;
-  }
-  /*header*/
-  header {
-    width: 100vw;
   }
 
   #general-informations {
@@ -423,9 +422,6 @@ footer a {
 }
 
 @media screen and (max-width: 768px) {
-  header {
-    width: 100%;
-  }
 }
 
 /*small screens*/
@@ -438,7 +434,7 @@ footer a {
     flex-direction: column;
   }
 
-  header {
+  .infos {
     flex-direction: column;
   }
 
@@ -446,11 +442,7 @@ footer a {
     margin: auto;
   }
 
-  #button-contact {
-    margin: 30px auto 10px auto;
-  }
-
-  .infos {
+  .text {
     margin: auto;
     width: 320px;
   }
