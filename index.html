@@ -45,21 +45,34 @@
   <body>
     <div class="container">
       <!--menu-->
-      <nav>
-      <div class="openMenu"><i class="fa fa-bars"></i> </div>
-        <ul class="mainMenu">
-          <li><a href="#personal-informations">Qui suis je ?</a></li>
-          <li><a href="#skills">Mes compétences</a></li>
-          <li><a href="#portfolio">Mon portfolio</a></li>
-          <li><a href="#work">Parcours professionnel</a></li>
-          <li><a href="cv-adekambi-rachad.pdf">Télécharger mon cv</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <div class="closeMenu"><i class="fa fa-times"></i></div>
-        </ul>
-      </div>
       <!--header-->
       <header>
-        <div class="pic">
+        <div id="hamburger">
+          <div id="hamburger-content">
+            <nav>
+              <ul>
+                <li><a href="#personal-informations">Qui suis je ?</a></li>
+                <li><a href="#skills">Mes compétences</a></li>
+                <li><a href="#portfolio">Mon portfolio</a></li>
+                <li><a href="#work">Parcours professionnel</a></li>
+                <li><a href="cv-adekambi-rachad.pdf">Télécharger mon cv</a></li>
+                <li><a href="#contact">Contact</a></li>
+               </ul>
+            </nav>
+             </div> 
+
+            <button id="hamburger-button">&#9776;</button>
+            <div id="hamburger-sidebar">
+              <div id="hamburger-sidebar-header"></div>
+              <div id="hamburger-sidebar-body"></div>
+            </div>
+
+            <div id="hamburger-overlay"></div>
+          </div>  
+      </header>
+      
+      <nav class="infos">
+         <div class="pic">
           <img
             src="pic0.jpg"
             id="img1"
@@ -68,7 +81,7 @@
           />
         </div>
 
-        <div class="infos">
+        <div class="text">
           <h1>ADEKAMBI Rachad Alabi</h1>
           <p><i class="fas fa-code"></i>
               <strong>Développeur web</strong>
@@ -81,7 +94,7 @@
                <a href="#"><i class="far fa-envelope"></i></a>
           </div>
         </div>
-      </header>
+      </nav>
 
       <!--profile & skills-->
       <div class="personal-informations" id="personal-informations">
@@ -282,7 +295,7 @@
     </div>
 
      <!--javascript-->
-    <script src="./app.js"></script>
+    <script src="app.js"></script>
 
   </body>
 </html>
