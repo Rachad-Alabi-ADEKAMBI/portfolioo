@@ -1,164 +1,201 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
-    <title>Adekambi Rachad</title>
-    <!--meta -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
-    <meta
-      name="description"
-      content=" je suis développeur web full stack, je concevrai votre site/application web selon vos besoins"
-    />
-    <meta name="author" content="adekambi rachad" />
-    <meta name="robots" content="index, follow" />
-    <!-- css-->
-    <link rel="stylesheet" type="text/css" href="assets/sass/css/styles.css" />
-    
-    <!--font awesome-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="assets/sass/css/styles.css" />
+
+    <title>Codeur Creatif</title>
+
+    <!-- Include the library for the github calendar -->
+<script
+  src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+</script>
+
+<!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+/>
+
+ <!--font awesome-->
     <script
       src="https://kit.fontawesome.com/b14771b76e.js"
       crossorigin="anonymous"
     ></script>
 
-    <!-- github calendar css -->
-    <link
-      rel="stylesheet"
-      href="assets/plugins/github-calendar/dist/github-calendar.css"
-    />
-
-    <!-- github activity css -->
-    <link
-      rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="assets/plugins/github-activity/github-activity-0.1.5.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
-    />
   </head>
-
   <body>
-    <div class="container">
-      <!--menu-->
-      <header>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-          <i class="fa a-bars"></i>
-        </label>
-              <ul class="menu">
-                <li><a href="#personal-informations" class="active">Qui suis je ?</a></li>
-                <li><a href="#skills">Mes compétences</a></li>
-                <li><a href="#portfolio">Mon portfolio</a></li>
-                <li><a href="#work">Parcours professionnel</a></li><li><a href="#contact">Contact</a></li>
-               </ul>
-        </header>
+    <header class="header">
+      <a href="#" class="header__logo">Rachad Adekambi</a>
+
+      <ion-icon
+        name="menu-outline"
+        class="header__toggle"
+        id="nav-toggle"
+      ></ion-icon>
+
+      <nav class="nav" id="nav-menu">
+        <div class="nav__content bd-grid">
+          <ion-icon
+            name="close-outline"
+            class="nav__close"
+            id="nav-close"
+          ></ion-icon>
+
+          <div class="nav__perfil">
+            <div class="nav__img">
+              <img src="assets/img/perfil.png" alt="" />
+            </div>
+
+            <div>
+              <a href="#" class="nav__name">Rachad Adekambi</a>
+              <span class="nav__profesion">Développeur web</span>
+            </div>
+          </div>
+
+          <div class="nav__menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#about" class="nav__link active">Qui suis je ?</a>
+              </li>
+              <li class="nav__item">
+                <a href="#skills" class="nav__link">Mes compétences</a>
+              </li>
+              <li class="nav__item">
+                <a href="#portfolio" class="nav__link">Mon portfolio</a>
+              </li>
+              <li class="nav__item">
+                <a href="#work-experience" class="nav__link"
+                  >Expérience et Etudes</a
+                >
+              </li>  
+              </li>
+              <li class="nav__item">
+                <a href="#contact" class="nav__link">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav__social">
+            <a href="#" class="nav__social-icon"
+              ><ion-icon name="logo-linkedin"></ion-icon
+            ></a>
+            <a href="#" class="nav__social-icon"
+              ><ion-icon name="logo-github"></ion-icon
+            ></a>
+            <a href="#" class="nav__social-icon"
+              ><ion-icon name="logo-behance"></ion-icon
+            ></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+  <main>
+    <!--infos-->
+    <div class="infos">
+     
+        <img
+          src="pic0.jpg"
+          id="img1"
+          alt="image developpeur web"
+          title="image developpeur web"
+        />
+  
+
+      <div class="text">
+        <h1>ADEKAMBI Rachad Alabi</h1>
+        <p>
+          <i class="fas fa-code"></i>
+          <strong>Développeur web</strong>
+        </p>
       
-      <div class="infos">
-         <div class="pic">
-          <img
-            src="pic0.jpg"
-            id="img1"
-            alt="image developpeur web"
-            title="image developpeur web"
-          />
-        </div>
+      </div>
+    </div>
 
-        <div class="text">
-          <h1>ADEKAMBI Rachad Alabi</h1>
-          <p><i class="fas fa-code"></i>
-              <strong>Développeur web</strong>
-          </p>
-          <div class="icons">
-            <a href="https://www.linkedin.com/in/rachad-alabi-adekambi-2753a21b5/"><i class="fab fa-linkedin-in"></i></a>
-             <a href="https://github.com/Rachad-Alabi-ADEKAMBI"><i class="fab fa-github"></i></a>
-             <a href="https://hub.docker.com/u/rachadadekambi"><i class="fab fa-docker"></i></a>
-               <a href="https://codepen.io/Codeur_creatif"><i class="fab fa-codepen"></i></a>
-               <a href="#"><i class="far fa-envelope"></i></a>
-          </div>
+    <!--profile & skills-->
+    <div class="about" id="about">
+      <!--profile-->
+      <div class="profile">
+        <h2>Qui suis je ?</h2>
+        <div class="profile-text" id="#profile-text">
+          Bonjour, moi c'est Rachad, je suis développeur web full stack junior
+          en fin de formation. Je travaille parallèlement en freelance afin de
+          gagner un peu plus d'expérience. Je fais toujours le nécessaire pour
+          éffectuer rapidement et éfficacement les tâches qui me sont confiées.
+          Mes autres passions sont la musculation et les jeux vidéos. Egalement
+          passionné de lecture je propose régulièrement des traductions
+          de l'anglais vers le français et inversement sur
+          <a href="https://fr.quora.com/profile/Rachad-Adekambi">Quora</a> .
         </div>
       </div>
-
-      <!--profile & skills-->
-      <div class="personal-informations" id="personal-informations">
-        <!--profile-->
-        <div class="profile">
-          <h2>Qui suis je ?</h2>
-          <div class="profile-text" id="#profile-text">
-            Bonjour, moi c'est Rachad, je suis développeur web full stack junior
-            en fin de formation. Je travaille parallèlement en freelance afin de
-            gagner un peu plus d'expérience. Je fais toujours le nécessaire pour
-            éffectuer rapidement et éfficacement les tâches qui me sont
-            confiées. Mes autres passions sont la musculation et les jeux
-            vidéos. Egalement passionné de lecture je propose régulièrement des
-            traductions anglais-française sur
-            <a href="https://fr.quora.com/profile/Rachad-Adekambi">Quora</a> .
-          </div>
+      <!--skills-->
+      <div class="skills" id="skills">
+        <div id="programming-lang">
+          <h2>Compétences</h2>
+          <ul>
+            <li>HTML5, CSS3, SASS</li>
+            <li>Javascript,</li>
+            <li>CMS</li>
+            <li>Linux</li>
+          </ul>
         </div>
-        <!--skills-->
-        <div class="skills" id="skills">
-          <div id="programming-lang">
-            <h2>Compétences</h2>
-            <ul>
-              <li>HTML5, CSS3, SASS</li>
-              <li>Javascript,</li>
-              <li>CMS</li>
-              <li>Linux</li>
-            </ul>
-          </div>
-          <div id="spoken-lang">
-            <h2>Langues</h2>
-            <ul>
-              <li>Français (C1)</li>
-              <li>Anglais(B2)</li>
-            </ul>
-          </div>
+        <div id="spoken-lang">
+          <h2>Langues</h2>
+          <ul>
+            <li>Français (C1)</li>
+            <li>Anglais(B2)</li>
+          </ul>
         </div>
       </div>
+    </div>
 
-      <!-- portfolio-->
-      <div id="portfolio">
+    <!-- portfolio-->
+      <div id="portfolio" class="portfolio">
         <!--portfolio list-->
         <div class="portfolio-list">
           <h2>Mon portfolio</h2>
           <ul>
-              <li>
-              <a href="https://www.shinewithme.000webhostapp.com"
-                >https://www.shinewithme.com</a
+             <li>
+              <a href="https://rachad-alabi-adekambi.github.io/RachadAlabiAdekambi_3_29112020/"
+                >OhMyFood (en cours)</a
               >
             </li>
             <li>
-              <a href="https://www.frankobisness-store.netlify.app"
-                >https://www.frankobisness-store.com</a
+              <a href="https://rachad-alabi-adekambi.github.io/RachadAlabiAdekambi_2_09112020/"
+                >Reservia</a
               >
             </li>
+
+             <li>
+              <a href="https://rachad-alabi-adekambi.github.io/Katchr/"
+                >Katchr</a
+              >
+            </li>
+           
+            <li>
+              <a href="https://www.shinewithme.000webhostapp.com"
+                >Shine with me</a
+              >
+            </li>
+           
             <li>
               <a href="https://www.coachkeby.000webhostapp.com"
-                >https://www.coachkeby.com</a
+                >Coach keby</a
               >
             </li>
             <li>
-              <a href="https://www.celiadelices.netlify.app"
-                >https://www.celiadelices.com</a
-              >
-            </li>
-            <li>
-              <a href="https://www.frankobisness-transit.netlify.app"
-                >https://www.frankobisness-transit.com</a
-              >
-            </li>
-            <li>
-                  <a href="https://github.com/Rachad-Alabi-ADEKAMBI/thekingdom">
-                The kingdom </a>
-              </li>
-              <li>
                   <a href="https://github.com/Rachad-Alabi-ADEKAMBI/del">
                 Aux mille délices</a>
               </li>
+            <li>
+              <a href="https://www.celiadelices.netlify.app"
+                >Celia délices</a
+              >
+            </li>
           </ul>
         </div>
         <!--portfolio-slider-->
@@ -176,13 +213,13 @@
       </div>
 
       <!--work experience -->
-      <div id="work">
-        <div class="work__experience">
+      <div class="work" id="work">
+        <div class="work-experience" id="work-experience">
           <h2 class="work-experience-title">
-            Parcours professionnel
+            Expérience et études
           </h2>
-          <div class="work-experience-text">
-            Je travaille en freelance sur des plateformes dont
+          <div class="work-experience__text" >
+            Actuelle Je travaille en freelance sur des plateformes dont
             <a href="https://5euros.com/profil/codeur-creatif">5 euros</a>. J'ai
             aussi developpé quelques projets lors de ma formation quelques
             projets présents sur mon
@@ -197,7 +234,7 @@
         </div>
 
         <!--testimonies-->
-        <div id="testimonies">
+        <div class="testimonies">
           <h2 class="testimonies-title">Témoignages</h2>
           <div class="testimonies-boxes">
             <div class="testimonies-box">
@@ -225,33 +262,28 @@
       </div>
 
       <!-- github -->
-      <div id="github">
-        <h2>Mon Github</h2>
-        <p class="github-text">
-          Ci dessous un récapitulatif de mon activité sur
-          <a href="https://github.com/Rachad-Alabi-Adekambi" target="_blank"
-            >GitHub</a
-          ></p>
-          <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
-        </p>
+      <div id="github"><h2 class="github">Mon Github</h2> <div class="calendar">
+    <!-- Loading stuff -->
+    Loading the data just for you.
+    <script>
+    GitHubCalendar(".calendar", "Rachad-Alabi-Adekambi");
 
-        <div class="calendar"></div>
-      </div>
+    // or enable responsive functionality:
+    GitHubCalendar(".calendar", "Rachad-Alabi-Adekambi", { responsive: true });
 
-      <script>
-        GitHubCalendar(".calendar", "Rachad-Alabi-Adekambi");
-        GitHubCalendar(".calendar", "Rachad-Alabi-Adekambi", {
-          responsive: true,
-        });
-      </script>
-
-      <!--//Usage: https://caseyscarborough.com/projects/github-activity/ -->
-      <div id="ghfeed" class="ghfeed"></div>
-      <!--//ghfeed-->
+    // Use a proxy
+    GitHubCalendar(".calendar", "Rachad-Alabi-Adekambi", {
+       proxy (username) {
+         return fetch(`https://github.com/Rachad-Alabi-ADEKAMBI/=${Rachad-Alabi-Adekambi}`)
+       }
+    }).then(r => r.text())
+</script>
+     </div>
+     </div>
 
       <!--contact-->    
       <div id="contact">
-        <h2>Contactez moi</h2>
+        <h2 class="contact-title">Contactez moi</h2>
         <div class="contact-form">
           <form action="contact.php" method="post">
             <div>
@@ -267,7 +299,7 @@
             </div>
             <div>
               <textarea
-                id="msg"
+                id="message"
                 name="user_message"
                 placeholder="Message"
               ></textarea>
@@ -276,8 +308,16 @@
           </form>
         </div>
       </div>
-
+  </main>
       <!--footer-->
-      <footer>codé par <a href="#">Adekambi Rachad</a></footer>
+      <footer><p>codé par <a href="#">Adekambi Rachad</a></p></footer>
     </div>
+
+
+    <!-- ===== IONICONS ===== -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
