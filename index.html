@@ -13,8 +13,6 @@
 <script
   src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
 </script>
-
-<!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
 <link
   rel="stylesheet"
   href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
@@ -56,28 +54,22 @@
             </div>
           </div>
 
-          <div class="nav__menu">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a href="#about" class="nav__link active">Qui suis je ?</a>
-              </li>
-              <li class="nav__item">
-                <a href="#skills" class="nav__link">Mes compétences</a>
-              </li>
-              <li class="nav__item">
-                <a href="#portfolio" class="nav__link">Mon portfolio</a>
-              </li>
-              <li class="nav__item">
-                <a href="#work-experience" class="nav__link"
-                  >Expérience et Etudes</a
-                >
-              </li>  
-              </li>
-              <li class="nav__item">
-                <a href="#contact" class="nav__link">Contact</a>
-              </li>
-            </ul>
-          </div>
+          <nav>
+  <input id="nav-toggle" type="checkbox" />
+  <div class="logo">MINZ<strong>CODE</strong></div>
+  <ul class="links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <label for="nav-toggle" class="icon-burger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </label>
+</nav>
 
           <div class="nav__social">
             <a href="#" class="nav__social-icon"
@@ -321,3 +313,4 @@
     <script src="assets/js/main.js"></script>
   </body>
 </html>
+
