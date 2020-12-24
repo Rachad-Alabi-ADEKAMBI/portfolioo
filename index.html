@@ -3,31 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- ===== CSS ===== -->
-    <link rel="stylesheet" href="assets/sass/css/styles.css" />
-
-    <title>Codeur Creatif</title>
-
-    <!-- Include the library for the github calendar -->
-<script
-  src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
-</script>
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
-/>
-
- <!--font awesome-->
-    <script
-      src="https://kit.fontawesome.com/b14771b76e.js"
-      crossorigin="anonymous"
-    ></script>
-
+    <link rel="stylesheet" href="styles.css" />
+    <title>Menu responsive</title>
   </head>
   <body>
     <header class="header">
-      <a href="#" class="header__logo">Rachad Adekambi</a>
+      <a href="#" class="header__logo">Rachad ADEKAMBI</a>
 
       <ion-icon
         name="menu-outline"
@@ -45,31 +26,39 @@
 
           <div class="nav__perfil">
             <div class="nav__img">
-              <img src="assets/img/perfil.png" alt="" />
+              <img src="pic0.jpeg" alt="image de développeur web" />
             </div>
 
             <div>
-              <a href="#" class="nav__name">Rachad Adekambi</a>
+              <a href="#" class="nav__name">Rachad ADEKAMBI</a>
               <span class="nav__profesion">Développeur web</span>
             </div>
           </div>
 
-          <nav>
-  <input id="nav-toggle" type="checkbox" />
-  <div class="logo">MINZ<strong>CODE</strong></div>
-  <ul class="links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <label for="nav-toggle" class="icon-burger">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-  </label>
-</nav>
+          <div class="nav__menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#about" class="nav__link active">Qui suis je ?</a>
+              </li>
+              <li class="nav__item">
+                <a href="#skills" class="nav__link">Compétences</a>
+              </li>
+              <li class="nav__item">
+                <a href="#skill" class="nav__link">Portfolio</a>
+              </li>
+              <li class="nav__item">
+                <a href="#work-experience" class="nav__link"
+                  >Expériences professionnelles</a
+                >
+              </li>
+              <li class="#studies">
+                <a href="#" class="nav__link">Etudes</a>
+              </li>
+              <li class="#contact">
+                <a href="#" class="nav__link">Contact</a>
+              </li>
+            </ul>
+          </div>
 
           <div class="nav__social">
             <a href="#" class="nav__social-icon"
@@ -86,47 +75,42 @@
       </nav>
     </header>
 
-  <main>
     <!--infos-->
     <div class="infos">
-     
-        <img
-          src="pic0.jpg"
-          id="img1"
-          alt="image developpeur web"
-          title="image developpeur web"
-        />
-  
+      <img
+        src="img1.jpg"
+        alt="image developpeur web"
+        title="image developpeur web"
+      />
 
-      <div class="text">
-        <h1>ADEKAMBI Rachad Alabi</h1>
+      <div class="infos__text">
+        <h1>ADEKAMBI <br />Rachad Alabi</h1>
         <p>
           <i class="fas fa-code"></i>
           <strong>Développeur web</strong>
         </p>
-      
       </div>
     </div>
 
     <!--profile & skills-->
     <div class="about" id="about">
       <!--profile-->
-      <div class="profile">
+      <div class="about__profile">
         <h2>Qui suis je ?</h2>
-        <div class="profile-text" id="#profile-text">
+        <div class="about__profile__text" id="#about__profile__text">
           Bonjour, moi c'est Rachad, je suis développeur web full stack junior
           en fin de formation. Je travaille parallèlement en freelance afin de
           gagner un peu plus d'expérience. Je fais toujours le nécessaire pour
           éffectuer rapidement et éfficacement les tâches qui me sont confiées.
           Mes autres passions sont la musculation et les jeux vidéos. Egalement
-          passionné de lecture je propose régulièrement des traductions
-          de l'anglais vers le français et inversement sur
+          passionné de lecture je propose régulièrement des traductions de
+          l'anglais vers le français et inversement sur
           <a href="https://fr.quora.com/profile/Rachad-Adekambi">Quora</a> .
         </div>
       </div>
       <!--skills-->
-      <div class="skills" id="skills">
-        <div id="programming-lang">
+      <div class="about__skills" id="about__skills">
+        <div id="about__skills__programming-lang">
           <h2>Compétences</h2>
           <ul>
             <li>HTML5, CSS3, SASS</li>
@@ -135,7 +119,7 @@
             <li>Linux</li>
           </ul>
         </div>
-        <div id="spoken-lang">
+        <div id="about__skills__spoken-lang">
           <h2>Langues</h2>
           <ul>
             <li>Français (C1)</li>
@@ -146,171 +130,65 @@
     </div>
 
     <!-- portfolio-->
-      <div id="portfolio" class="portfolio">
-        <!--portfolio list-->
-        <div class="portfolio-list">
-          <h2>Mon portfolio</h2>
-          <ul>
-             <li>
-              <a href="https://rachad-alabi-adekambi.github.io/RachadAlabiAdekambi_3_29112020/"
-                >OhMyFood (en cours)</a
-              >
-            </li>
-            <li>
-              <a href="https://rachad-alabi-adekambi.github.io/RachadAlabiAdekambi_2_09112020/"
-                >Reservia</a
-              >
-            </li>
+    <div id="portfolio" class="portfolio">
+      <!--portfolio list-->
+      <div class="portfolio-list">
+        <h2>Mon portfolio</h2>
+        <ul>
+          <li>
+            <a
+              href="https://rachad-alabi-adekambi.github.io/RachadAlabiAdekambi_3_29112020/"
+              >OhMyFood (en cours)</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://rachad-alabi-adekambi.github.io/RachadAlabiAdekambi_2_09112020/"
+              >Reservia</a
+            >
+          </li>
 
-             <li>
-              <a href="https://rachad-alabi-adekambi.github.io/Katchr/"
-                >Katchr</a
-              >
-            </li>
-           
-            <li>
-              <a href="https://www.shinewithme.000webhostapp.com"
-                >Shine with me</a
-              >
-            </li>
-           
-            <li>
-              <a href="https://www.coachkeby.000webhostapp.com"
-                >Coach keby</a
-              >
-            </li>
-            <li>
-                  <a href="https://github.com/Rachad-Alabi-ADEKAMBI/del">
-                Aux mille délices</a>
-              </li>
-            <li>
-              <a href="https://www.celiadelices.netlify.app"
-                >Celia délices</a
-              >
-            </li>
-          </ul>
-        </div>
-        <!--portfolio-slider-->
-        <div class="portfolio-slider">
-          <div class="slides">
-            <slide><img src="pic1.jpg" alt="image de site web" /></slide>
-            <slide><img src="pic2.jpg" alt="image de site web" /></slide>
-            <slide><img src="pic3.jpg" alt="image de site web" /></slide>
-            <slide><img src="pic4.jpg" alt="image de site web" /></slide>
-            <slide><img src="pic5.jpg" alt="image de site web" /></slide>
-            <slide><img src="pic6.jpg" alt="image de site web" /></slide>
-            <slide><img src="pic7.png" alt="image de site web" /></slide>
-          </div>
+          <li>
+            <a href="https://rachad-alabi-adekambi.github.io/Katchr/">Katchr</a>
+          </li>
+
+          <li>
+            <a href="https://www.shinewithme.000webhostapp.com"
+              >Shine with me</a
+            >
+          </li>
+
+          <li>
+            <a href="https://www.coachkeby.000webhostapp.com">Coach keby</a>
+          </li>
+          <li>
+            <a href="https://github.com/Rachad-Alabi-ADEKAMBI/del">
+              Aux mille délices</a
+            >
+          </li>
+          <li>
+            <a href="https://www.celiadelices.netlify.app">Celia délices</a>
+          </li>
+        </ul>
+      </div>
+      <!--portfolio-slider-->
+      <div class="portfolio__slider">
+        <div class="slides">
+          <slide><img src="pic1.jpg" alt="image de site web" /></slide>
+          <slide><img src="pic2.jpg" alt="image de site web" /></slide>
+          <slide><img src="pic3.jpg" alt="image de site web" /></slide>
+          <slide><img src="pic4.jpg" alt="image de site web" /></slide>
+          <slide><img src="pic5.jpg" alt="image de site web" /></slide>
+          <slide><img src="pic6.jpg" alt="image de site web" /></slide>
+          <slide><img src="pic7.png" alt="image de site web" /></slide>
         </div>
       </div>
-
-      <!--work experience -->
-      <div class="work" id="work">
-        <div class="work-experience" id="work-experience">
-          <h2 class="work-experience-title">
-            Expérience et études
-          </h2>
-          <div class="work-experience__text" >
-            Actuelle Je travaille en freelance sur des plateformes dont
-            <a href="https://5euros.com/profil/codeur-creatif">5 euros</a>. J'ai
-            aussi developpé quelques projets lors de ma formation quelques
-            projets présents sur mon
-            <a href="https://github.com/CodeurCreatif">GitHub</a>.<br />
-            Egalement titulaire d'un baccalauréat en marketing et actions
-            commerciales j'ai effectué un premier stage au service clientèle de
-            ECOBANK BENIN et ai ensuite travaillé en tant que commercial au sein
-            de AHVIC SARL. Ces différentes expériences m'ont permis de
-            comprendre à quel point le client est important pour l'entreprise et
-            aussi de développer ma capacité à travailller en équipe.
-          </div>
-        </div>
-
-        <!--testimonies-->
-        <div class="testimonies">
-          <h2 class="testimonies-title">Témoignages</h2>
-          <div class="testimonies-boxes">
-            <div class="testimonies-box">
-              <p>
-                "Impeccable, travail de qualité<br />
-                et rapidité d'exécution au top"<br />Loic,
-                <a href="https://5euros.com/profil/codeur-creatif"
-                  >client 5 euros</a
-                >
-                satisfait.
-              </p>
-            </div>
-            <div class="testimonies-box">
-              <p>
-                "Excellent travail, très rapide<br />
-                et éfficace"<br />Clément,
-                <a href="https://5euros.com/profil/codeur-creatif"
-                  >client 5 euros</a
-                >
-                satisfait.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- github -->
-      <div id="github"><h2 class="github">Mon Github</h2> <div class="calendar">
-    <!-- Loading stuff -->
-    Loading the data just for you.
-    <script>
-    GitHubCalendar(".calendar", "Rachad-Alabi-Adekambi");
-
-    // or enable responsive functionality:
-    GitHubCalendar(".calendar", "Rachad-Alabi-Adekambi", { responsive: true });
-
-    // Use a proxy
-    GitHubCalendar(".calendar", "Rachad-Alabi-Adekambi", {
-       proxy (username) {
-         return fetch(`https://github.com/Rachad-Alabi-ADEKAMBI/=${Rachad-Alabi-Adekambi}`)
-       }
-    }).then(r => r.text())
-</script>
-     </div>
-     </div>
-
-      <!--contact-->    
-      <div id="contact">
-        <h2 class="contact-title">Contactez moi</h2>
-        <div class="contact-form">
-          <form action="contact.php" method="post">
-            <div>
-              <input type="text" id="name" name="user_name" placeholder="Nom" />
-            </div>
-            <div>
-              <input
-                type="email"
-                id="mail"
-                name="user_mail"
-                placeholder="Email"
-              />
-            </div>
-            <div>
-              <textarea
-                id="message"
-                name="user_message"
-                placeholder="Message"
-              ></textarea>
-            </div>
-            <button class="button-submit" type="submit">Envoyer</button>
-          </form>
-        </div>
-      </div>
-  </main>
-      <!--footer-->
-      <footer><p>codé par <a href="#">Adekambi Rachad</a></p></footer>
     </div>
 
-
-    <!-- ===== IONICONS ===== -->
+    <!--script-->
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.js"></script>
   </body>
 </html>
-
