@@ -6,7 +6,7 @@
 }
 
 :root {
-  --first-color: #3664f4;
+  --first-color: #8697d9;
   --dark-color: #070d1f;
   --dark-color-alt: #282b3a;
   --white-color: #e6e7e9;
@@ -90,7 +90,7 @@ img {
 }
 
 .header__logo {
-  color: var(--white-color);
+  color: #8697d9;
 }
 
 .header__toggle {
@@ -265,10 +265,10 @@ img {
     border-radius: 0.25rem;
   }
   .nav__link:hover {
-    background-color: var(--first-color);
+    background-color: #8697d9;
   }
   .active {
-    background-color: var(--first-color);
+    background-color: #8697d9;
     color: var(--white-color);
   }
 }
@@ -291,6 +291,16 @@ img {
   img {
     margin: 20px auto;
   }
+
+  &__text {
+    h1 {
+      color: #8697d9;
+      margin: 50px auto 5px auto;
+    }
+    p {
+      margin: 5px auto auto auto;
+    }
+  }
 }
 
 /*profile & skills*/
@@ -301,7 +311,6 @@ img {
   justify-content: space-between;
   margin: 10px auto;
   text-align: center;
-  background-color: red;
   line-height: 2em;
 
   &__profile {
@@ -309,7 +318,8 @@ img {
     margin: auto 20px auto 20px;
 
     h2 {
-      margin: auto;
+      margin: auto auto 20px auto;
+      color: #8697d9;
     }
 
     &__text {
@@ -318,7 +328,328 @@ img {
   }
 
   &__skills {
-    margin: auto 30px;
+    h2 {
+      margin: auto 30px;
+      color: #8697d9;
+    }
+  }
+}
+
+/*portfolio*/
+@keyframes slide-effect {
+  0% {
+    transform: translateX(-250px);
+  }
+  20% {
+    transform: translateX(-750px);
+  }
+  40% {
+    transform: translateX(-1000px);
+  }
+  60% {
+    transform: translateX(-1500px);
+  }
+  80% {
+    transform: translateX(-2000px);
+  }
+  100% {
+    transform: translateX(-500px);
+  }
+}
+
+/*portfolio*/
+.portfolio {
+  width: 1020px;
+  margin: 10px auto auto auto;
+  text-align: center;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+
+  &__list {
+    text-align: center;
+    margin: auto;
+
+    h2 {
+      margin: auto;
+      color: #8697d9;
+    }
+
+    ul li a {
+      color: black;
+      cursor: s;
+    }
+  }
+
+  &__slider {
+    width: 500px;
+    height: 400px;
+    overflow: hidden;
+    margin: auto;
+
+    &__slides {
+      width: 2500px;
+      animation: slide-effect 10s infinite;
+
+      .slide {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/*experience*/
+.experience {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  text-align: center;
+  width: 90%;
+}
+
+/*studies*/
+.studies {
+  margin: 30px auto;
+  text-align: center;
+
+  h2 {
+    margin: 10px auto;
+    color: #8697d9;
+  }
+
+  &__list {
+    margin: auto;
+    text-align: left;
+  }
+}
+
+/*work*/
+.work {
+  margin: auto;
+
+  h2 {
+    margin: 50px auto 0 auto;
+    color: #8697d9;
+  }
+  &__list {
+    margin: 5px auto;
+    text-align: left;
+  }
+}
+
+/*github*/
+.github {
+  width: 80%;
+  margin: auto;
+
+  h2 {
+    margin: 30px auto 5px auto;
+    text-align: center;
+    color: #8697d9;
+  }
+
+  .calendar {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+/*testimonies*/
+.testimonies {
+  width: 70%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+
+  &__title {
+    margin: auto 630px 15px auto;
+    color: #8697d9;
+  }
+
+  &__text {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+  }
+}
+
+/*contact*/
+.contact {
+  margin: auto;
+  color: #8697d9;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__title {
+    margin: 40px auto 10px auto;
+  }
+
+  &__form {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    input {
+      margin: 10px auto 10px auto;
+      width: 80%;
+    }
+
+    textarea {
+      width: 80%;
+      margin: auto auto 10px auto;
+      height: 200px;
+    }
+
+    button {
+      margin: auto;
+      width: 100px;
+      border-radius: 30px;
+      height: 40px;
+      background-color: #8697d9;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}
+/*footer*/
+.footer {
+  background-color: #8697d9;
+  margin: 30px auto 0 auto;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 2em;
+
+  &__infos {
+    margin: auto;
+
+    h4 {
+      margin: auto;
+      font-size: 1.4em;
+      color: white;
+    }
+
+    &__profession {
+      li {
+        margin: auto;
+      }
+
+      li:hover {
+        color: white;
+        border-bottom: 1px white solid;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__links {
+    margin: auto;
+    text-align: center;
+
+    h4 {
+      color: white;
+      font-size: 1.4em;
+      margin-bottom: 5px;
+    }
+
+    ul li a {
+      color: black;
+      cursor: pointer;
+    }
+
+    ul li a:hover {
+      color: white;
+      border-bottom: 1px white solid;
+    }
+  }
+}
+
+/* max 1024px */
+@media screen and (max-width: 1024px) {
+  .infos {
+    &__text {
+      line-height: 1.9em;
+    }
+  }
+
+  /*profile*/
+  .about {
+    width: 80%;
+
+    &__skills {
+      h2 {
+        margin: 20px auto;
+      }
+    }
+  }
+
+  /*github*/
+  .github {
+    width: 90%;
+    margin: auto;
+  }
+
+  /*testimonies*/
+  .testimonies {
+    &__title {
+      margin: 30px auto 10px auto;
+    }
+    &__text {
+      width: 90%;
+      margin: 20px auto;
+    }
+  }
+}
+
+/* max 768px */
+@media screen and (max-width: 768px) {
+  .infos {
+    width: 60%;
+    line-height: 1.9em;
+  }
+
+  /*work*/
+  .work {
+    h2 {
+      margin: 20px auto;
+    }
+  }
+
+  /*github*/
+  .github {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+
+    .calendar {
+      width: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
+  }
+
+  /*testimonies*/
+  .testimonies {
+    margin: auto;
+    &__title {
+      margin: 30px auto 10px auto;
+    }
+    &__text {
+      width: 90%;
+      margin: 10px auto;
+      text-align: center;
+    }
   }
 }
 
@@ -350,6 +681,7 @@ img {
       }
     }
   }
+
   /*profile & skills*/
   .about {
     flex-direction: column;
@@ -361,5 +693,86 @@ img {
       width: 100%;
       margin: auto;
     }
+  }
+
+  /*portfolio*/
+  .portfolio {
+    width: 95%;
+    flex-direction: column;
+    height: max-content;
+
+    &__slider {
+      width: 100%;
+    }
+  }
+
+  /*experience*/
+  .experience {
+    flex-direction: column;
+  }
+
+  /*studies*/
+  .studies {
+    margin: 30px auto 5px auto;
+  }
+
+  /*work*/
+  .work {
+    margin: 5px auto;
+
+    h2 {
+      margin: 30px auto;
+    }
+  }
+
+  /*testimonies*/
+  .testimonies {
+    h2 {
+      margin: auto auto 5px auto;
+    }
+    &__text {
+      flex-direction: column;
+      width: 90%;
+
+      &__sample {
+        margin: 10px auto;
+      }
+    }
+  }
+
+  /*github*/
+  .github {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  /*contact*/
+  .contact {
+    width: 80%;
+
+    &__title {
+      margin: 40px auto 10px auto;
+    }
+
+    &__form {
+      width: 100%;
+
+      input {
+        margin: 10px auto 10px auto;
+        width: 100%;
+      }
+
+      textarea {
+        width: 100%;
+        margin: auto auto 10px auto;
+        height: 200px;
+      }
+    }
+  }
+
+  /*footer*/
+  .footer {
+    flex-direction: column;
   }
 }
