@@ -37,7 +37,7 @@
 
           <div class="nav__perfil">
             <div class="nav__img">
-              <img src="pic0.jpeg" alt="image de développeur web" />
+              <img src="assets/img/logo.jpeg" alt="image de développeur web" />
             </div>
 
             <div>
@@ -49,23 +49,21 @@
           <div class="nav__menu">
             <ul class="nav__list">
               <li class="nav__item">
-                <a href="#about__profile__text" class="nav__link active"
+                <a href="#about__profile" class="nav__link active"
                   >Qui suis je ?</a
                 >
               </li>
               <li class="nav__item">
-                <a href="#about__skills__programming-lang" class="nav__link"
-                  >Compétences</a
-                >
+                <a href="#about__skills" class="nav__link">Compétences</a>
               </li>
               <li class="nav__item">
                 <a href="#portfolio" class="nav__link">Portfolio</a>
               </li>
               <li class="nav__item">
-                <a href="#studies__list" class="nav__link">Etudes</a>
+                <a href="#studies" class="nav__link">Etudes</a>
               </li>
               <li class="nav__item">
-                <a href="#work__list" class="nav__link"
+                <a href="#work" class="nav__link"
                   >Expériences professionnelles</a
                 >
               </li>
@@ -76,14 +74,20 @@
           </div>
 
           <div class="nav__social">
-            <a href="#" class="nav__social-icon"
+            <a
+              href="https://www.linkedin.com/in/rachad-alabi-adekambi-2753a21b5/"
+              class="nav__social-icon"
               ><ion-icon name="logo-linkedin"></ion-icon
             ></a>
-            <a href="#" class="nav__social-icon"
+            <a
+              href="https://github.com/Rachad-Alabi-ADEKAMBI"
+              class="nav__social-icon"
               ><ion-icon name="logo-github"></ion-icon
             ></a>
-            <a href="#" class="nav__social-icon"
-              ><ion-icon name="logo-behance"></ion-icon
+            <a
+              href="https://hub.docker.com/u/rachadadekambi"
+              class="nav__social-icon"
+              ><ion-icon name="logo-docker"></ion-icon
             ></a>
           </div>
         </div>
@@ -93,7 +97,7 @@
     <!--infos-->
     <div class="infos">
       <img
-        src="img1.jpg"
+        src="assets/img/pic0.jpg"
         alt="image developpeur web"
         title="image developpeur web"
       />
@@ -110,13 +114,13 @@
     <!--profile & skills-->
     <div class="about" id="about">
       <!--profile-->
-      <div class="about__profile">
+      <div class="about__profile" id="about__profile">
         <h2>Qui suis je ?</h2>
         <div class="about__profile__text" id="#about__profile__text">
-          Bonjour, moi c'est Rachad, je suis développeur web full stack en fin
-          de formation à Open Classrooms, mes passions sont le sport, la lecture
-          et les jeux, j'aime autant les jeux vidéos comme Call of Duty que les
-          jeux de sociéte comme les échecs.
+          Bonjour, moi c'est Rachad, je suis développeur web full stack, mes
+          passions sont le sport, la lecture et les jeux vidéos. Je suis
+          souriant, curieux et je m'applique à toujours exécuter les tâches qui
+          me sont confiées.
         </div>
       </div>
       <!--skills-->
@@ -125,7 +129,7 @@
         <div id="about__skills__programming-lang">
           <ul>
             <li>HTML5, CSS3, SASS</li>
-            <li>Javascript,</li>
+            <li>Javascript, Node Js</li>
             <li>Wordpress, Shopify, Wix</li>
             <li>Linux</li>
           </ul>
@@ -184,31 +188,18 @@
       </div>
 
       <!--portfolio-slider-->
-      <div class="portfolio__slider">
-        <div class="portfolio__slider__slides">
-          <div class="slide">
-            <img src="pic1.jpg" alt="image de site web" />
-          </div>
-          <div class="slide">
-            <img src="pic2.jpg" alt="image de site web" />
-          </div>
-          <div class="slide">
-            <img src="pic3.jpg" alt="image de site web" />
-          </div>
-          <div class="slide">
-            <img src="pic4.jpg" alt="image de site web" />
-          </div>
-          <div class="slide">
-            <img src="pic5.jpg" alt="image de site web" />
-          </div>
-          <div class="slide">
-            <img src="pic6.jpg" alt="image de site web" />
-          </div>
-          <div class="slide">
-            <img src="pic7.png" alt="image de site web" />
-          </div>
-          <div class="slide">
-            <img src="pic8.png" alt="image de site web" />
+      <div class="container">
+        <div class="slider">
+          <div class="slides">
+            <div class="slide"><img src="assets/img/pic1.png" alt="" /></div>
+            <div class="slide"><img src="assets/img/pic2.png" alt="" /></div>
+            <div class="slide"><img src="assets/img/pic3.jpg" alt="" /></div>
+            <div class="slide"><img src="assets/img/pic4.jpg" alt="" /></div>
+            <div class="slide"><img src="assets/img/pic5.jpg" alt="" /></div>
+            <div class="slide"><img src="assets/img/pic6.jpg" alt="" /></div>
+            <div class="slide"><img src="assets/img/pic7.png" alt="" /></div>
+            <div class="slide"><img src="assets/img/pic8.png" alt="" /></div>
+            <div class="slide"><img src="assets/img/pic9.jpg" alt="" /></div>
           </div>
         </div>
       </div>
@@ -236,7 +227,7 @@
     </div>
 
     <!-- github -->
-    <div class="github">
+    <div class="github" id="github">
       <h2>Mon github</h2>
       <div class="calendar">
         <!-- Loading stuff -->
