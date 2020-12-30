@@ -579,15 +579,15 @@ ul::after {
 
   /*studies*/
   .studies {
-    margin: 30px auto 5px auto;
+    margin: 30px auto;
   }
 
   /*work*/
   .work {
-    margin: 5px auto;
+    margin: 10px auto;
 
     h2 {
-      margin: 30px auto;
+      margin: 20px auto;
     }
   }
 
@@ -612,9 +612,8 @@ ul::after {
   .github {
     width: 90%;
     margin: auto;
-    overflow: hidden;
     h2 {
-      margin: 10px auto 10px auto;
+      margin: 10px auto;
     }
   }
 
@@ -630,13 +629,13 @@ ul::after {
       width: 100%;
 
       input {
-        margin: 10px auto 10px auto;
+        margin: 10px auto;
         width: 100%;
       }
 
       textarea {
         width: 100%;
-        margin: auto auto 10px auto;
+        margin: 10px auto;
         height: 200px;
       }
     }
