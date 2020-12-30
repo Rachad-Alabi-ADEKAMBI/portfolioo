@@ -544,14 +544,14 @@ ul::after {
   }
   /*studies*/
   .studies {
-    margin: 30px auto 5px auto;
+    margin: 30px auto;
   }
   /*work*/
   .work {
-    margin: 5px auto;
+    margin: 10px auto;
   }
   .work h2 {
-    margin: 30px auto;
+    margin: 20px auto;
   }
   /*testimonies*/
   .testimonies h2 {
@@ -569,10 +569,9 @@ ul::after {
   .github {
     width: 90%;
     margin: auto;
-    overflow: hidden;
   }
   .github h2 {
-    margin: 10px auto 10px auto;
+    margin: 10px auto;
   }
   /*contact*/
   .contact {
@@ -585,12 +584,12 @@ ul::after {
     width: 100%;
   }
   .contact__form input {
-    margin: 10px auto 10px auto;
+    margin: 10px auto;
     width: 100%;
   }
   .contact__form textarea {
     width: 100%;
-    margin: auto auto 10px auto;
+    margin: 10px auto;
     height: 200px;
   }
   /*footer*/
