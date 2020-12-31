@@ -1,0 +1,661 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Tahoma, sans-serif;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  background-color: #8697d9;
+  top: 0;
+  margin: 0 auto 30px auto;
+
+  &__menu-mobile {
+    display: none;
+  }
+
+  input {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked ~ ul {
+    display: block;
+  }
+
+  &__menu {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline;
+
+      a {
+        padding: 20px 30px;
+        color: white;
+        display: inline-block;
+      }
+    }
+
+    li:hover {
+      background-color: rgba(220, 220, 220, 0.15);
+      border-top: 5px solid rgba(220, 220, 220, 0.15);
+    }
+
+    li:hover a {
+      padding: 15px 30px 20px 30px;
+      font-weight: bold;
+    }
+  }
+}
+ul::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*infos*/
+.infos {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: max-content;
+
+  img {
+    margin: 20px auto;
+  }
+
+  &__text {
+    h1 {
+      color: #8697d9;
+      margin: 50px auto 5px auto;
+    }
+
+    p {
+      margin: 5px auto auto auto;
+    }
+
+    ul {
+      margin: auto;
+
+      li {
+        display: inline-block;
+
+        a {
+          color: #8697d9;
+          margin: 10px auto;
+
+          i {
+            margin: 10px 10px auto auto;
+            font-size: 1.5em;
+          }
+
+          i:hover {
+            color: #593e8b;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*profile & skills*/
+.about {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px auto;
+  text-align: center;
+  line-height: 2em;
+
+  &__profile {
+    width: 50%;
+    margin: auto 20px auto 20px;
+
+    h2 {
+      margin: auto auto 5px auto;
+      color: #8697d9;
+    }
+
+    &__text {
+      margin: auto 30px auto auto;
+    }
+  }
+
+  &__skills {
+    h2 {
+      margin: 30px auto 5px auto;
+      color: #8697d9;
+    }
+  }
+}
+
+/*portfolio*/
+@keyframes slide-effect {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-500px);
+  }
+  20% {
+    transform: translateX(-1000px);
+  }
+  30% {
+    transform: translateX(-1500px);
+  }
+  40% {
+    transform: translateX(-2000px);
+  }
+  50% {
+    transform: translateX(-2500px);
+  }
+  60% {
+    transform: translateX(-3000px);
+  }
+  70% {
+    transform: translateX(-3500px);
+  }
+  80% {
+    transform: translateX(-4000px);
+  }
+  90% {
+    transform: translateX(-4500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*portfolio*/
+.portfolio {
+  width: 60%;
+  margin: 30px auto;
+  text-align: center;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  line-height: 2em;
+
+  &__list {
+    text-align: center;
+    margin: auto;
+
+    h2 {
+      margin: auto auto 10px auto;
+      color: #8697d9;
+    }
+
+    a {
+      color: black;
+      cursor: pointer;
+    }
+
+    a:hover {
+      border-bottom: 2px #8697d9 solid;
+    }
+  }
+}
+
+.slider {
+  width: 500px;
+  height: 400px;
+  overflow: hidden;
+  margin: 15px auto;
+
+  .slides {
+    width: calc(500px * 9);
+    animation: slide-effect 20s infinite;
+
+    .slide {
+      float: left;
+    }
+  }
+}
+
+/*experience*/
+.experience {
+  display: flex;
+  flex-direction: row;
+  margin: 30px auto;
+  text-align: center;
+  width: 75%;
+  line-height: 2em;
+}
+
+/*studies*/
+.studies {
+  margin: 30px auto;
+  text-align: center;
+
+  h2 {
+    margin: 10px auto;
+    color: #8697d9;
+  }
+
+  &__list {
+    margin: auto;
+    text-align: left;
+  }
+}
+
+/*work*/
+.work {
+  margin: auto;
+
+  h2 {
+    margin: 50px auto 0 auto;
+    color: #8697d9;
+  }
+  &__list {
+    margin: 5px auto;
+    text-align: left;
+  }
+}
+
+/*github*/
+.github {
+  width: 80%;
+  margin: auto;
+
+  h2 {
+    margin: 30px auto 5px auto;
+    text-align: center;
+    color: #8697d9;
+  }
+
+  .calendar {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+/*testimonies*/
+.testimonies {
+  width: 70%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+  line-height: 2em;
+
+  &__title {
+    margin: 5px auto;
+    color: #8697d9;
+  }
+
+  &__text {
+    margin: 5px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+  }
+}
+
+/*contact*/
+.contact {
+  margin: auto;
+  color: #8697d9;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__title {
+    margin: 40px auto 10px auto;
+  }
+
+  &__form {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    input {
+      margin: 10px auto;
+      width: 80%;
+      text-align: left;
+    }
+
+    textarea {
+      width: 80%;
+      margin: 10px auto;
+      height: 200px;
+      text-align: left;
+    }
+
+    button {
+      margin: 10px auto;
+      width: 100px;
+      border-radius: 30px;
+      border: 1px #8697d9 solid;
+      height: 40px;
+      background-color: #8697d9;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      font-weight: bold;
+    }
+  }
+}
+/*footer*/
+.footer {
+  background-color: #8697d9;
+  margin: 30px auto 0 auto;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 2em;
+
+  &__infos {
+    margin: auto;
+
+    h4 {
+      margin: auto;
+      font-size: 1.4em;
+      color: white;
+    }
+
+    &__profession {
+      li {
+        margin: auto;
+        cursor: pointer;
+      }
+
+      li:hover {
+        color: white;
+        border-bottom: 1px white solid;
+      }
+    }
+  }
+
+  &__links {
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+
+    li {
+      margin: auto;
+      color: black;
+    }
+
+    li:hover {
+      color: white;
+      border-bottom: 1px white solid;
+    }
+    h4 {
+      color: white;
+      font-size: 1.4em;
+      margin-bottom: 5px;
+    }
+
+    a {
+      color: black;
+    }
+
+    a:hover {
+      color: white;
+      font-weight: bold;
+    }
+  }
+}
+
+/* max 1024px */
+@media screen and (max-width: 1024px) {
+  .header {
+    label {
+      display: block;
+      color: white;
+      padding: 12px 0px;
+    }
+
+    ul {
+      display: none;
+
+      li {
+        width: 100%;
+
+        a {
+          width: 100%;
+          padding: 10px 0px;
+        }
+      }
+
+      li:hover a {
+        padding: 10px 0px;
+      }
+    }
+  }
+  /*infos*/
+  .infos {
+    &__text {
+      line-height: 1.9em;
+    }
+  }
+
+  /*profile*/
+  .about {
+    width: 80%;
+
+    &__skills {
+      h2 {
+        margin: 20px auto;
+      }
+    }
+  }
+
+  /*portfolio*/
+  .portfolio {
+    width: 95%;
+    margin: auto auto 5px auto;
+  }
+
+  /*experience*/
+  .experience {
+    margin: 0 auto;
+
+    .studies {
+      h2 {
+        margin: 0 auto;
+        color: red;
+      }
+    }
+  }
+
+  /*github*/
+  .github {
+    width: 90%;
+  }
+
+  /*testimonies*/
+  .testimonies {
+    &__title {
+      margin: 30px auto 10px auto;
+    }
+    &__text {
+      width: 90%;
+      margin: 20px auto;
+    }
+  }
+}
+
+/* max 768px */
+@media screen and (max-width: 768px) {
+  /*infos*/
+  .infos {
+    width: 90%;
+    line-height: 1.9em;
+  }
+
+  /*work*/
+  .work {
+    h2 {
+      margin: 20px auto;
+    }
+  }
+
+  /*github*/
+  .github {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+
+    .calendar {
+      width: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
+  }
+
+  /*testimonies*/
+  .testimonies {
+    margin: auto;
+    &__title {
+      margin: 30px auto 10px auto;
+    }
+    &__text {
+      width: 90%;
+      margin: 10px auto;
+      text-align: center;
+    }
+  }
+}
+
+/* max 576px */
+@media screen and (max-width: 576px) {
+  .infos {
+    flex-direction: column;
+    width: auto;
+
+    img {
+      margin: auto;
+      width: 300px;
+    }
+
+    &__text {
+      margin: auto;
+      text-align: center;
+      line-height: 2em;
+
+      h1 {
+        margin-bottom: 5px;
+      }
+
+      p {
+        margin: 5px auto;
+      }
+    }
+  }
+
+  /*profile & skills*/
+  .about {
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    line-height: 2em;
+
+    &__profile {
+      width: 100%;
+      margin: auto;
+    }
+  }
+
+  /*portfolio*/
+  .portfolio {
+    width: 95%;
+    flex-direction: column;
+    height: max-content;
+  }
+
+  .slider {
+    width: 100%;
+  }
+
+  /*experience*/
+  .experience {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  /*studies*/
+  .studies {
+    margin: 30px auto;
+  }
+
+  /*work*/
+  .work {
+    margin: 10px auto;
+
+    h2 {
+      margin: 20px auto;
+    }
+  }
+
+  /*testimonies*/
+  .testimonies {
+    h2 {
+      margin: 20px auto;
+    }
+
+    &__text {
+      flex-direction: column;
+      width: 90%;
+      margin: auto;
+
+      &__sample {
+        margin: 10px auto;
+      }
+    }
+  }
+
+  /*github*/
+  .github {
+    width: 90%;
+    margin: auto;
+    h2 {
+      margin: 10px auto;
+    }
+  }
+
+  /*contact*/
+  .contact {
+    width: 80%;
+
+    &__title {
+      margin: 40px auto 10px auto;
+    }
+
+    &__form {
+      width: 100%;
+
+      input {
+        margin: 10px auto;
+        width: 100%;
+      }
+
+      textarea {
+        width: 100%;
+        margin: 10px auto;
+        height: 200px;
+      }
+    }
+  }
+
+  /*footer*/
+  .footer {
+    flex-direction: column;
+  }
+}

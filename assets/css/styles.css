@@ -445,6 +445,15 @@ ul::after {
   /*portfolio*/
   .portfolio {
     width: 95%;
+    margin: auto auto 5px auto;
+  }
+  /*experience*/
+  .experience {
+    margin: 0 auto;
+  }
+  .experience .studies h2 {
+    margin: 0 auto;
+    color: red;
   }
   /*github*/
   .github {
