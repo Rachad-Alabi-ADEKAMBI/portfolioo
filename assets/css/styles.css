@@ -109,7 +109,6 @@ ul::after {
   flex-direction: row;
   justify-content: space-between;
   margin: 10px auto;
-  text-align: center;
   line-height: 2em;
 }
 
@@ -119,12 +118,13 @@ ul::after {
 }
 
 .about__profile h2 {
-  margin: auto auto 5px auto;
+  margin: auto;
   color: #8697d9;
 }
 
 .about__profile__text {
-  margin: auto 30px auto auto;
+  margin: auto;
+  text-align: justify;
 }
 
 .about__skills h2 {
@@ -174,7 +174,7 @@ ul::after {
   width: 60%;
   margin: 30px auto;
   text-align: center;
-  height: 500px;
+  height: 400px;
   display: flex;
   flex-direction: row;
   padding: 10px;
@@ -187,7 +187,7 @@ ul::after {
 }
 
 .portfolio__list h2 {
-  margin: auto auto 10px auto;
+  margin: auto;
   color: #8697d9;
 }
 
@@ -220,26 +220,23 @@ ul::after {
 .experience {
   display: flex;
   flex-direction: row;
-  margin: 30px auto;
-  text-align: center;
+  margin: 15px auto;
   width: 75%;
   line-height: 2em;
 }
 
 /*studies*/
 .studies {
-  margin: 30px auto;
-  text-align: center;
+  margin: 50px auto;
 }
 
 .studies h2 {
-  margin: 10px auto;
+  margin: auto;
   color: #8697d9;
 }
 
 .studies__list {
   margin: auto;
-  text-align: left;
 }
 
 /*work*/
@@ -248,13 +245,12 @@ ul::after {
 }
 
 .work h2 {
-  margin: 50px auto 0 auto;
+  margin: auto;
   color: #8697d9;
 }
 
 .work__list {
   margin: 5px auto;
-  text-align: left;
 }
 
 /*github*/
@@ -264,14 +260,14 @@ ul::after {
 }
 
 .github h2 {
-  margin: 30px auto 5px auto;
+  margin: auto;
   text-align: center;
   color: #8697d9;
 }
 
 .github .calendar {
   width: 90%;
-  margin: auto;
+  margin: 15px auto;
 }
 
 /*testimonies*/
@@ -285,12 +281,12 @@ ul::after {
 }
 
 .testimonies__title {
-  margin: 5px auto;
+  margin: auto;
   color: #8697d9;
 }
 
 .testimonies__text {
-  margin: 5px auto;
+  margin: 15px auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -308,7 +304,7 @@ ul::after {
 }
 
 .contact__title {
-  margin: 40px auto 10px auto;
+  margin: auto;
 }
 
 .contact__form {
@@ -319,20 +315,20 @@ ul::after {
 }
 
 .contact__form input {
-  margin: 10px auto;
+  margin: 5px auto;
   width: 80%;
   text-align: left;
 }
 
 .contact__form textarea {
   width: 80%;
-  margin: 10px auto;
+  margin: 5px auto;
   height: 200px;
   text-align: left;
 }
 
 .contact__form button {
-  margin: 10px auto;
+  margin: 5px auto;
   width: 100px;
   border-radius: 30px;
   border: 1px #8697d9 solid;
@@ -432,32 +428,47 @@ ul::after {
     padding: 10px 0px;
   }
   /*infos*/
+  .infos {
+    margin-bottom: 0;
+  }
   .infos__text {
     line-height: 1.9em;
   }
   /*profile*/
   .about {
     width: 80%;
+    margin: 5px auto;
   }
   .about__skills h2 {
-    margin: 20px auto;
+    margin: 20px auto 5px auto;
   }
   /*portfolio*/
   .portfolio {
     width: 95%;
-    margin: auto auto 5px auto;
+    margin: auto;
   }
   /*experience*/
   .experience {
+    margin: 55px auto;
+  }
+  .experience .studies {
     margin: 0 auto;
   }
   .experience .studies h2 {
     margin: 0 auto;
-    color: red;
+  }
+  .experience .work {
+    margin: auto;
+  }
+  .experience .work h2 {
+    margin: auto;
   }
   /*github*/
   .github {
     width: 90%;
+  }
+  .github h2 {
+    margin: auto;
   }
   /*testimonies*/
   .testimonies__title {
@@ -465,7 +476,11 @@ ul::after {
   }
   .testimonies__text {
     width: 90%;
-    margin: 20px auto;
+    margin: auto;
+  }
+  /*contact*/
+  .contact {
+    width: 95%;
   }
 }
 
@@ -477,8 +492,8 @@ ul::after {
     line-height: 1.9em;
   }
   /*work*/
-  .work h2 {
-    margin: 20px auto;
+  .experience {
+    width: 95%;
   }
   /*github*/
   .github {
@@ -494,14 +509,19 @@ ul::after {
   /*testimonies*/
   .testimonies {
     margin: auto;
+    width: 95%;
   }
   .testimonies__title {
-    margin: 30px auto 10px auto;
+    margin: 30px auto 5px auto;
   }
   .testimonies__text {
     width: 90%;
-    margin: 10px auto;
+    margin: 0 auto;
     text-align: center;
+  }
+  /*contact*/
+  .contact {
+    margin: 20px auto;
   }
 }
 
@@ -510,6 +530,7 @@ ul::after {
   .infos {
     flex-direction: column;
     width: auto;
+    margin: 10px auto;
   }
   .infos img {
     margin: auto;
@@ -518,7 +539,6 @@ ul::after {
   .infos__text {
     margin: auto;
     text-align: center;
-    line-height: 2em;
   }
   .infos__text h1 {
     margin-bottom: 5px;
@@ -532,6 +552,7 @@ ul::after {
     width: 90%;
     margin: auto;
     line-height: 2em;
+    margin: 20px auto;
   }
   .about__profile {
     width: 100%;
@@ -550,26 +571,43 @@ ul::after {
   .experience {
     flex-direction: column;
     width: 90%;
+    margin-bottom: 10px;
   }
   /*studies*/
   .studies {
-    margin: 30px auto;
+    margin: 20px auto;
+  }
+  .studies h2 {
+    margin: 10px auto;
+  }
+  .studies ul {
+    margin-bottom: 20px;
   }
   /*work*/
   .work {
-    margin: 10px auto;
+    margin: 20px auto;
   }
   .work h2 {
-    margin: 20px auto;
+    margin: 30px auto;
+  }
+  /*github*/
+  .github {
+    margin: 0 auto;
+  }
+  .github h2 {
+    margin: 10px auto;
   }
   /*testimonies*/
+  .testimonies {
+    margin: 30px auto;
+  }
   .testimonies h2 {
-    margin: 20px auto;
+    margin: 10px auto 0 auto;
   }
   .testimonies__text {
     flex-direction: column;
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
   }
   .testimonies__text__sample {
     margin: 10px auto;
@@ -583,23 +621,8 @@ ul::after {
     margin: 10px auto;
   }
   /*contact*/
-  .contact {
-    width: 80%;
-  }
-  .contact__title {
-    margin: 40px auto 10px auto;
-  }
-  .contact__form {
+  .contact form {
     width: 100%;
-  }
-  .contact__form input {
-    margin: 10px auto;
-    width: 100%;
-  }
-  .contact__form textarea {
-    width: 100%;
-    margin: 10px auto;
-    height: 200px;
   }
   /*footer*/
   .footer {
