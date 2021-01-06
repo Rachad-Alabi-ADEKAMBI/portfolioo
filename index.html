@@ -75,9 +75,9 @@
         <h2>Qui suis je ?</h2>
         <div class="about__profile__text" id="about__profile__text">
           Bonjour, moi c'est Rachad, je suis développeur web full stack, mes
-          passions sont le sport, la lecture et les jeux vidéos. Je suis
-          souriant, curieux et je m'applique à toujours exécuter les tâches qui
-          me sont confiées éfficacement et rapidement.
+          passions sont le sport, la lecture et les jeux vidéos. Je suis de
+          nature souriant, curieux et je m'applique à toujours exécuter les
+          tâches qui me sont confiées éfficacement et rapidement.
         </div>
       </div>
       <!--skills-->
@@ -246,7 +246,10 @@
         <input type="text" id="name" name="user_name" placeholder="Nom" />
 
         <input type="email" id="mail" name="user_mail" placeholder="Email" />
-
+        <? php
+    $n = $_GET['nom'];
+    $a = $_GET['age'];
+    ?>
         <textarea
           id="message"
           name="user_message"
@@ -272,7 +275,7 @@
       <ul class="footer__links">
         <li><h4>Liens</h4></li>
         <li><a href="#about"> Qui suis je ? </a></li>
-        <li><a href="#portfolio"> Portfolio ? </a></li>
+        <li><a href="#portfolio"> Portfolio </a></li>
         <li><a href="#github"> Mon github</a></li>
       </ul>
     </footer>
