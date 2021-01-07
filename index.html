@@ -242,14 +242,15 @@
     <!--contact-->
     <div id="contact" class="contact">
       <h2 class="contact__title">Contactez moi</h2>
-      <form class="contact__form" action="contact.php" method="post">
+      <form
+        class="contact__form"
+        action="contact.php"
+        method="post"
+        enctype="multipart/form-data"
+      >
         <input type="text" id="name" name="user_name" placeholder="Nom" />
 
         <input type="email" id="mail" name="user_mail" placeholder="Email" />
-        <? php
-    $n = $_GET['nom'];
-    $a = $_GET['age'];
-    ?>
         <textarea
           id="message"
           name="user_message"
