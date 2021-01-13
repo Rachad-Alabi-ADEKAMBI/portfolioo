@@ -74,10 +74,10 @@
       <div class="about__profile" id="about__profile">
         <h2>Qui suis je ?</h2>
         <div class="about__profile__text" id="about__profile__text">
-          Bonjour, moi c'est Rachad, je suis développeur web full stack, mes
-          passions sont le sport, la lecture et les jeux vidéos. Je suis de
-          nature souriant, curieux et je m'applique à toujours exécuter les
-          tâches qui me sont confiées éfficacement et rapidement.
+          Bonjour, moi c'est Rachad, je suis développeur web. Je suis
+          autodidacte, curieux et je m'applique à toujours exécuter les tâches
+          qui me sont confiées éfficacement et rapidement. Mes passions sont le
+          sport, la lecture et les jeux vidéos.
         </div>
       </div>
       <!--skills-->
@@ -85,8 +85,8 @@
         <div id="about__skills__programming-lang">
           <h2>Compétences</h2>
           <ul>
-            <li>HTML5, CSS3, SASS</li>
-            <li>Javascript, Node Js</li>
+            <li>HTML, CSS, Javascript</li>
+            <li>PHP, SQL</li>
             <li>Wordpress, Shopify, Wix</li>
             <li>Linux</li>
           </ul>
@@ -242,22 +242,16 @@
     <!--contact-->
     <div id="contact" class="contact">
       <h2 class="contact__title">Contactez moi</h2>
-      <form
-        class="contact__form"
-        action="contact.php"
-        method="post"
-        enctype="multipart/form-data"
-      >
+      <form class="contact__form" action="contact.php" method="POST">
         <input type="text" id="name" name="user_name" placeholder="Nom" />
-
-        <input type="email" id="mail" name="user_mail" placeholder="Email" />
+        <input type="text" id="mail" name="user_mail" placeholder="Email" />
+        <input type="text" id="subject" name="user_query" placeholder="Objet" />
         <textarea
           id="message"
           name="user_message"
           placeholder="Message"
         ></textarea>
-
-        <button class="button-submit" type="submit">Envoyer</button>
+        <input class="button-submit" type="submit" name="submit" />
       </form>
     </div>
 
@@ -265,10 +259,28 @@
     <footer class="footer">
       <div class="footer__infos">
         <h4 class="footer__infos__title">Rachad Alabi ADEKAMBI</h4>
-        <ul class="footer__infos__profession">
-          <li>
+        <a href="#"
+          ><p class="footer__infos__profession">
             <i class="fas fa-code"></i>
-            <strong>Développeur web</strong>
+            Développeur web
+          </p></a
+        >
+        <ul>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/rachad-alabi-adekambi-2753a21b5/"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/Rachad-Alabi-ADEKAMBI">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://hub.docker.com/u/rachadadekambi">
+              <i class="fab fa-docker"></i>
+            </a>
           </li>
         </ul>
       </div>
