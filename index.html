@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/styles.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
     <!-- Include the library for the github calendar -->
     <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
     <link
@@ -27,8 +27,6 @@
         <li><a href="#about">Qui suis je ?</a></li>
         <li><a href="#about__skills">Mes compétences</a></li>
         <li><a href="#portfolio">Mon portfolio</a></li>
-        <li><a href="#studies">Etudes</a></li>
-        <li><a href="#work">Expériences professionnelles</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </header>
@@ -36,16 +34,17 @@
     <!--infos-->
     <div class="infos">
       <img
-        src="assets/img/pic0.jpg"
+        src="assets/img/photo.png "
         alt="image developpeur web"
         title="image developpeur web"
+        class="profil"
       />
 
       <div class="infos__text">
         <h1>ADEKAMBI <br />Rachad Alabi</h1>
         <p>
           <i class="fas fa-code"></i>
-          Développeur web
+          Développeur web full stack
         </p>
         <ul>
           <li>
@@ -74,10 +73,12 @@
       <div class="about__profile" id="about__profile">
         <h2>Qui suis je ?</h2>
         <div class="about__profile__text" id="about__profile__text">
-          Bonjour, moi c'est Rachad, je suis développeur web. Je suis
-          autodidacte, curieux et je m'applique à toujours exécuter les missions
-          qui me sont confiées éfficacement et rapidement. Mes passions sont le
-          sport, la lecture et les jeux vidéos.
+          Bonjour, moi c'est Rachad et je suis développeur web full stack.
+           Freelance sur plusieurs plateformes dont
+          <a href="https://5euros.com/profil/codeur-creatif" class="5 euros">5euros</a>
+           et <a href="https://fr.fiverr.com/users/codeur_creatif" class="fiver"> Fiver
+          </a> je fais de la satisfaction de mes clients une priorité.
+           Mes passions sont le sport, la lecture et les jeux vidéos.
         </div>
       </div>
       <!--skills-->
@@ -86,13 +87,13 @@
           <h2>Compétences</h2>
           <ul>
             <li>HTML, CSS, Javascript</li>
-            <li>PHP, SQL</li>
+            <li>PHP, MYSQL</li>
             <li>Wordpress, Shopify, Wix</li>
-            <li>Linux</li>
+            <li>Linux, Windows</li>
           </ul>
         </div>
         <div id="about__skills__spoken-lang">
-          <h2>Langues</h2>
+          <h2 class="langages_title">Langues</h2>
           <ul>
             <li>Français (C1)</li>
             <li>Anglais(B2)</li>
@@ -107,40 +108,45 @@
       <div class="portfolio__list">
         <h2>Mon portfolio</h2>
         <ul>
-          <li>
+           <li>
             <a
-              href="https://www.lacavedesclubs.com/"
+              href="https://lacavedesclubs.com/"
               >La cave des clubs</a
             >
           </li>
-          <li>
-            <a
-              href="http://www.orchid-home.com//"
-              >Orchid-home</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.salonbellemiss.com//"
-              >Salon Bellemiss</a
-            >
-          </li>
-          
+
           <li>
             <a
               href="https://rachad-alabi-adekambi.github.io/RachadAlabiAdekambi_2_09112020/"
               >Reservia</a
             >
           </li>
+
           <li>
             <a
-              href="http://www.xwegbe.com//"
-              >Xwegbe</a
+              href="https://globalrenov.fr/"
+              >Globalrenov</a
             >
           </li>
 
           <li>
-            <a href="https://rachad-alabi-adekambi.github.io/Katchr/">Katchr</a>
+            <a
+              href="http://www.orchid-home.com/"
+              >Orchid-home</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.salonbellemiss.com/"
+              >Salon Bellemiss</a
+            >
+          </li>
+          
+          <li>
+            <a
+              href="https://www.xwegbe.com//"
+              >Xwegbe</a
+            >
           </li>
 
           <li>
@@ -154,13 +160,7 @@
               >Coach keby</a
             >
           </li>
-          <li>
-            <a
-              href="https://rachad-alabi-adekambi.github.io/les-milles-delices/"
-            >
-              Aux mille délices</a
-            >
-          </li>
+
           <li>
             <a href="https://rachad-alabi-adekambi.github.io/celia/"
               >Celia délices</a
@@ -187,33 +187,12 @@
       </div>
     </div>
 
-    <div class="experience">
-      <!--studies -->
-      <div class="studies" id="studies">
-        <h2 class="studies__title">Etudes</h2>
-        <ul class="studies__list" id="studies__list">
-          <li>2020: Diplôme de développeur web (en cours)</li>
-          <li>2012: BTS en Comptabilité et Gestion</li>
-        </ul>
-      </div>
-
-      <!--work -->
-      <div class="work" id="work">
-        <h2 class="work__title">Expériences professionnelles</h2>
-        <ul class="work__list" id="work__list">
-          <li>2020: Développeur web freelance</li>
-          <li>2014-2018: Comptable à AHVIC SARL</li>
-          <li>2013: Stage à ECOBANK BENIN</li>
-        </ul>
-      </div>
-    </div>
-
     <!-- github -->
     <div class="github" id="github">
       <h2>Mon github</h2>
       <div class="calendar">
         <!-- Loading stuff -->
-        Loading the data just for you.
+        Chargement des éléments
       </div>
 
       <script>
@@ -242,19 +221,27 @@
 
     <!--testimonies-->
     <div class="testimonies">
-      <h2 class="testimonies__title">Témoignages</h2>
+      <h2 class="testimonies__title">Temoignages</h2>
       <div class="testimonies__text">
         <div class="testimonies__text__sample">
-          "Impeccable, travail de qualité<br />
-          et rapidité d'exécution au top"<br />Loic,
-          <a href="https://5euros.com/profil/codeur-creatif">client 5 euros</a>
+          "Très bon travail, rapide et soigné, <br>
+           je recommande, merci!"<br />DLIM,
+          <a href="https://5euros.com/service/163007/vous-creer-votre-site-wordpress-2">client 5 euros</a>
           satisfait.
         </div>
+
+        <div class="testimonies__text__sample">"Commande entièrement respectée aussi <br>
+            bien dans mes exigences que sur les délais ! 10/10"<br />CiracoDamien,
+          <a href="https://5euros.com/service/175033/vous-developper-votre-site-web-de-a-a-z-en-html-css-js">client 5 euros</a>
+          satisfait.
+        </div>
+
         <div class="testimonies__text__sample">
           "Excellent travail, très <br />rapide et éfficace"<br />Clément,
-          <a href="https://5euros.com/profil/codeur-creatif">client 5 euros</a>
+          <a href="https://5euros.com/service/175033/vous-developper-votre-site-web-de-a-a-z-en-html-css-js">client 5 euros</a>
           satisfait.
         </div>
+
       </div>
     </div>
 

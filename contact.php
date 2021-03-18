@@ -1,11 +1,11 @@
 <?php
-if (isset($_POST) AND isset($_POST["user_name"]) AND isset($_POST["user_mail"]) AND isset($_POST["user_query"]) AND isset($_POST["user_message"]))
+if (isset($_POST) AND isset($_POST['user_name']) AND isset($_POST['user_mail']) AND isset($_POST['user_query']) AND isset($_POST['user_message']))
 {
    extract($_POST);
    if(!empty($user_name) AND !empty($user_mail) AND !empty($user_query) AND !empty($user_message))
    {  
       $user_message= str_replace("\'","'", $user_message);
-      $receiver= "adekambirachad@gmail.com";
+      $receiver= "codeur@codeurcreatif.com";
       $query="Formulaire de contact";
       $message="Une nouvelle question \n
       Nom: $user_name \n

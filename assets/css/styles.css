@@ -1,52 +1,60 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 *,
 body {
   margin: 0;
   padding: 0;
-  font-family: Verdana, Tahoma, sans-serif;
+  font-family: "Poppins", sans-serif;
   list-style: none;
   text-decoration: none;
   text-align: center;
 }
 
-.header {
-  width: 100%;
-  background-color: #8697d9;
-  top: 0;
-  margin: 0 auto 30px auto;
+a {
+  color: blueviolet;
+  color: 1.2em;
 }
 
+p {
+  font-size: 1.2em;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+.header {
+  width: 100%;
+  background-color: #593e8b;
+  top: 0;
+  margin: 0 auto 30px auto;
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
 .header__menu-mobile {
   display: none;
 }
-
 .header input {
   display: none;
 }
-
-.header input[type="checkbox"]:checked ~ ul {
+.header input[type=checkbox]:checked ~ ul {
   display: block;
 }
-
 .header__menu {
   margin: 0;
   padding: 0;
 }
-
 .header__menu li {
   display: inline;
 }
-
 .header__menu li a {
   padding: 20px 30px;
   color: white;
   display: inline-block;
 }
-
 .header__menu li:hover {
   background-color: rgba(220, 220, 220, 0.15);
   border-top: 5px solid rgba(220, 220, 220, 0.15);
 }
-
 .header__menu li:hover a {
   padding: 15px 30px 20px 30px;
   font-weight: bold;
@@ -66,40 +74,45 @@ ul::after {
   justify-content: space-between;
   width: max-content;
 }
-
 .infos img {
-  margin: 20px auto;
+  margin: 0px auto;
+  width: 190px;
+  height: 200px;
 }
-
+.infos__text {
+  margin-left: 30px;
+  text-align: left;
+  font-size: 1.2em;
+}
 .infos__text h1 {
-  color: #8697d9;
-  margin: 50px auto 5px auto;
+  margin: 50px auto 0 auto;
+  font-size: 1.4em;
+  color: #593e8b;
 }
-
 .infos__text p {
-  margin: 5px auto auto auto;
+  margin: 5px auto 0 auto;
+  text-align: left;
+  font-size: 1.1em;
 }
-
 .infos__text ul {
-  margin: auto;
+  margin: 5px auto;
 }
-
 .infos__text ul li {
   display: inline-block;
+  text-align: left;
+  font-size: 1.2em;
 }
-
 .infos__text ul li a {
   color: #8697d9;
   margin: 10px auto;
 }
-
 .infos__text ul li a i {
   margin: 10px 10px auto auto;
-  font-size: 1.5em;
-}
-
-.infos__text ul li a i:hover {
+  font-size: 1.3em;
   color: #593e8b;
+}
+.infos__text ul li a i:hover {
+  color: 8697D9;
 }
 
 /*profile & skills*/
@@ -111,25 +124,26 @@ ul::after {
   margin: 10px auto;
   line-height: 2em;
 }
-
 .about__profile {
   width: 50%;
-  margin: auto 20px auto 20px;
+  margin: 30px 20px auto 20px;
 }
-
 .about__profile h2 {
-  margin: auto;
-  color: #8697d9;
+  color: #593e8b;
+  font-size: 1.4em;
 }
-
 .about__profile__text {
   margin: auto;
   text-align: justify;
+  font-size: 1.2em;
 }
-
 .about__skills h2 {
-  margin: 30px auto 5px auto;
-  color: #8697d9;
+  margin: 20px auto 5px auto;
+  color: #593e8b;
+  font-size: 1.4em;
+}
+.about__skills ul li {
+  font-size: 1.2em;
 }
 
 /*portfolio*/
@@ -168,7 +182,6 @@ ul::after {
     transform: translateX(0);
   }
 }
-
 /*portfolio*/
 .portfolio {
   width: 60%;
@@ -180,24 +193,25 @@ ul::after {
   padding: 10px;
   line-height: 2em;
 }
-
 .portfolio__list {
-  text-align: center;
   margin: auto;
 }
-
 .portfolio__list h2 {
   margin: auto;
-  color: #8697d9;
+  color: #593e8b;
 }
-
+.portfolio__list ul li {
+  font-size: 1.2em;
+  text-align: left;
+}
 .portfolio__list a {
   color: black;
   cursor: pointer;
 }
-
 .portfolio__list a:hover {
-  border-bottom: 2px #8697d9 solid;
+  border-bottom: 2px #593e8b solid;
+  font-weight: bold;
+  color: #593e8b;
 }
 
 .slider {
@@ -206,65 +220,24 @@ ul::after {
   overflow: hidden;
   margin: 15px auto;
 }
-
 .slider .slides {
   width: calc(500px * 9);
   animation: slide-effect 20s infinite;
 }
-
 .slider .slides .slide {
   float: left;
-}
-
-/*experience*/
-.experience {
-  display: flex;
-  flex-direction: row;
-  margin: 15px auto;
-  width: 75%;
-  line-height: 2em;
-}
-
-/*studies*/
-.studies {
-  margin: 50px auto;
-}
-
-.studies h2 {
-  margin: auto;
-  color: #8697d9;
-}
-
-.studies__list {
-  margin: auto;
-}
-
-/*work*/
-.work {
-  margin: auto;
-}
-
-.work h2 {
-  margin: auto;
-  color: #8697d9;
-}
-
-.work__list {
-  margin: 5px auto;
 }
 
 /*github*/
 .github {
   width: 80%;
-  margin: auto;
+  margin: 50px auto;
 }
-
 .github h2 {
   margin: auto;
   text-align: center;
-  color: #8697d9;
+  color: #593e8b;
 }
-
 .github .calendar {
   width: 90%;
   margin: 15px auto;
@@ -272,81 +245,80 @@ ul::after {
 
 /*testimonies*/
 .testimonies {
-  width: 70%;
+  width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   margin: 30px auto;
   line-height: 2em;
+  text-align: left;
 }
-
 .testimonies__title {
   margin: auto;
-  color: #8697d9;
+  color: #593e8b;
 }
-
 .testimonies__text {
   margin: 15px auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 60%;
+  width: 80%;
+}
+.testimonies__text__sample {
+  text-align: left;
+  width: auto;
+  font-size: 1.2em;
 }
 
 /*contact*/
 .contact {
   margin: auto;
-  color: #8697d9;
   width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
 .contact__title {
   margin: auto;
+  color: #593e8b;
 }
-
 .contact__form {
   width: 80%;
   margin: auto;
   display: flex;
   flex-direction: column;
 }
-
 .contact__form input {
   margin: 5px auto;
   width: 80%;
   text-align: left;
 }
-
 .contact__form textarea {
   width: 80%;
   margin: 5px auto;
   height: 200px;
   text-align: left;
+  font-size: 1.2em;
 }
-
 .contact__form .button-submit {
   margin: 5px auto;
   width: 100px;
   border-radius: 30px;
-  border: 1px #8697d9 solid;
+  border: 1px #593e8b solid;
   height: 40px;
-  background-color: #8697d9;
+  background-color: #593e8b;
   color: white;
   font-weight: bold;
   cursor: pointer;
   text-align: center;
 }
-
 .contact__form .button-submit :hover {
   font-weight: bold;
 }
 
 /*footer*/
 .footer {
-  background-color: #8697d9;
+  background-color: #593e8b;
   margin: 30px auto 0 auto;
   bottom: 0;
   text-align: center;
@@ -355,71 +327,60 @@ ul::after {
   flex-direction: row;
   justify-content: space-between;
   line-height: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
 }
-
 .footer__infos {
   margin: auto;
   display: flex;
   flex-direction: column;
 }
-
 .footer__infos h4 {
   margin: auto;
   font-size: 1.4em;
   color: white;
 }
-
 .footer__infos__profession {
   cursor: pointer;
   color: black;
 }
-
 .footer__infos ul {
   margin: 5px auto;
 }
-
 .footer__infos ul li {
   display: inline;
 }
-
 .footer__infos ul li a i {
   color: white;
   cursor: pointer;
   font-size: 1.5em;
   margin: 5px 10px auto auto;
 }
-
 .footer__infos ul li a i:hover {
   border-bottom: 1px white solid;
   font-size: 1.8em;
 }
-
 .footer__links {
   margin: auto;
   text-align: center;
   cursor: pointer;
 }
-
 .footer__links li {
   margin: auto;
   color: black;
 }
-
 .footer__links li:hover {
   color: white;
   border-bottom: 1px white solid;
 }
-
 .footer__links h4 {
   color: white;
   font-size: 1.4em;
   margin-bottom: 5px;
 }
-
 .footer__links a {
   color: black;
 }
-
 .footer__links a:hover {
   color: white;
   font-weight: bold;
@@ -445,6 +406,7 @@ ul::after {
   .header ul li:hover a {
     padding: 10px 0px;
   }
+
   /*infos*/
   .infos {
     margin-bottom: 0;
@@ -452,6 +414,7 @@ ul::after {
   .infos__text {
     line-height: 1.9em;
   }
+
   /*profile*/
   .about {
     width: 80%;
@@ -460,27 +423,13 @@ ul::after {
   .about__skills h2 {
     margin: 20px auto 5px auto;
   }
+
   /*portfolio*/
   .portfolio {
     width: 95%;
     margin: auto;
   }
-  /*experience*/
-  .experience {
-    margin: 55px auto;
-  }
-  .experience .studies {
-    margin: 0 auto;
-  }
-  .experience .studies h2 {
-    margin: 0 auto;
-  }
-  .experience .work {
-    margin: auto;
-  }
-  .experience .work h2 {
-    margin: auto;
-  }
+
   /*github*/
   .github {
     width: 90%;
@@ -488,6 +437,7 @@ ul::after {
   .github h2 {
     margin: auto;
   }
+
   /*testimonies*/
   .testimonies__title {
     margin: 30px auto 10px auto;
@@ -496,12 +446,17 @@ ul::after {
     width: 90%;
     margin: auto;
   }
+  .testimonies__text__sample {
+    margin-right: 15px;
+    width: 100%;
+    justify-content: center;
+  }
+
   /*contact*/
   .contact {
     width: 95%;
   }
 }
-
 /* max 768px */
 @media screen and (max-width: 768px) {
   /*infos*/
@@ -509,10 +464,7 @@ ul::after {
     width: 90%;
     line-height: 1.9em;
   }
-  /*work*/
-  .experience {
-    width: 95%;
-  }
+
   /*github*/
   .github {
     width: 95%;
@@ -524,6 +476,7 @@ ul::after {
     margin: auto;
     overflow: hidden;
   }
+
   /*testimonies*/
   .testimonies {
     margin: auto;
@@ -537,33 +490,39 @@ ul::after {
     margin: 0 auto;
     text-align: center;
   }
+
   /*contact*/
   .contact {
     margin: 20px auto;
   }
 }
-
 /* max 576px */
 @media screen and (max-width: 576px) {
+  body {
+    width: 90%;
+    margin: auto;
+  }
+
   .infos {
     flex-direction: column;
     width: auto;
     margin: 10px auto;
   }
   .infos img {
-    margin: auto;
-    width: 300px;
+    margin: -20px auto 10px auto;
   }
   .infos__text {
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
   }
   .infos__text h1 {
     margin-bottom: 5px;
+    margin: 0px auto;
   }
   .infos__text p {
     margin: 5px auto;
   }
+
   /*profile & skills*/
   .about {
     flex-direction: column;
@@ -574,53 +533,43 @@ ul::after {
   }
   .about__profile {
     width: 100%;
-    margin: auto;
+    margin: auto 0 auto 0;
   }
+  .about h2 {
+    font-size: 1.2em;
+    margin: 20px auto 10px auto;
+  }
+
   /*portfolio*/
   .portfolio {
     width: 95%;
-    flex-direction: column;
+    flex-direction: column-reverse;
     height: max-content;
   }
+  .portfolio h2 {
+    font-size: 1.2em;
+  }
+
   .slider {
     width: 100%;
   }
-  /*experience*/
-  .experience {
-    flex-direction: column;
-    width: 90%;
-    margin-bottom: 10px;
-  }
-  /*studies*/
-  .studies {
-    margin: 20px auto;
-  }
-  .studies h2 {
-    margin: 10px auto;
-  }
-  .studies ul {
-    margin-bottom: 20px;
-  }
-  /*work*/
-  .work {
-    margin: 20px auto;
-  }
-  .work h2 {
-    margin: 30px auto;
-  }
+
   /*github*/
   .github {
     margin: 0 auto;
   }
   .github h2 {
     margin: 10px auto;
+    font-size: 1.2em;
   }
+
   /*testimonies*/
   .testimonies {
     margin: 30px auto;
   }
   .testimonies h2 {
-    margin: 10px auto 0 auto;
+    margin: 50px auto 0 auto;
+    font-size: 1.2em;
   }
   .testimonies__text {
     flex-direction: column;
@@ -630,6 +579,7 @@ ul::after {
   .testimonies__text__sample {
     margin: 10px auto;
   }
+
   /*github*/
   .github {
     width: 90%;
@@ -637,13 +587,21 @@ ul::after {
   }
   .github h2 {
     margin: 10px auto;
+    font-size: 1.2em;
   }
+
   /*contact*/
+  .contact h2 {
+    font-size: 1.2em;
+  }
   .contact form {
     width: 100%;
   }
+
   /*footer*/
   .footer {
     flex-direction: column;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */
