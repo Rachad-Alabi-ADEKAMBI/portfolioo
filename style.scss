@@ -1,0 +1,941 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+@mixin box{
+    box-shadow: 0px 5px 28px #00000029;
+    background-color: white;
+    border-radius: 15px;
+    width: 80%;
+    margin: 15px auto;
+}
+
+@mixin button{
+    width: auto;
+    height: 50px;
+    border: 1px solid #593e8b;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #593e8b;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+@mixin title{
+    font-size: 1.4em;
+    font-weight: bold;
+      color: #593e8b;
+      text-align: center;
+      margin: 15px auto;
+      border-bottom: 2px solid #593e8b;
+      width: 50%;
+}
+
+@mixin content($flex-direction: row ){
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: space-between;
+    width: 80%;
+}
+
+$purple: #593e8b;
+*,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+}
+
+a {
+  color: blueviolet;
+  color: 1.2em;
+  text-decoration: none;
+}
+
+a:hover{
+    filter: brightness(1.1);
+    border-bottom: none;
+    text-decoration: none;
+}
+
+p{
+  font-size: 1.2em;
+}
+
+h2{
+  text-transform: uppercase;
+}
+
+.header {
+  width: 100%;
+  background-color: #593e8b;
+  top: 0;
+  margin: 0 auto 30px auto;
+  text-transform: uppercase;
+  font-size: 1.1em;
+
+  &__menu-mobile {
+    display: none;
+  }
+
+  input {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked ~ ul {
+    display: block;
+  }
+
+  &__menu {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline;
+
+      a {
+        padding: 20px 30px;
+        color: white;
+        display: inline-block;
+      }
+    }
+
+    li:hover {
+      background-color: rgba(220, 220, 220, 0.15);
+      border-top: 5px solid rgba(220, 220, 220, 0.15);
+    }
+
+    li:hover a {
+      padding: 15px 30px 20px 30px;
+      font-weight: bold;
+    }
+  }
+}
+
+ul::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input{
+    border-radius: 10px;
+}
+
+textarea{
+    border-radius: 10px;
+}
+
+/*infos*/
+.infos {
+    @include box();
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+ &__image{
+     text-align: right;
+     flex: 1;
+     img {
+        margin: 0px auto;
+        width: 190px;
+        height: 200px;  
+        border-radius: 150px;   
+        
+    }
+ }
+
+  &__text {
+      float: left;
+      text-align: left;
+      margin: auto 0;
+    font-size: 1.2em;
+    flex: 1;
+    padding: 20px;
+    
+    h1 {
+      margin: 15px auto auto 0;
+      border-bottom: 2px solid $purple;
+      text-align: left;
+      font-weight: bold;
+      width: 50%;
+
+          }
+
+    p {
+      margin: 5px  auto;
+      text-align: left;
+      font-size: 1.1em;
+
+    }
+
+    ul {
+      margin: 5px auto;
+      text-align: left;
+
+      li {
+        display: inline-block;
+        text-align: left;
+        font-size: 1.2em;
+        transition: 500ms ease-in-out ;
+
+        a {
+          color: #8697d9;
+          margin: 10px auto;
+
+          i {
+            margin: 10px 10px auto auto;
+            font-size: 1.3em;
+            color: #593e8b;
+          }
+
+          i:hover {
+            color: $purple;
+          }
+        }
+      }
+
+      li:hover{
+          transform: scale(1.2);
+      }
+    }
+  }
+}
+
+/*profile & skills*/
+.about {
+ @include content();
+  margin: 10px auto;
+  line-height: 2em;
+
+  &__profile {
+    @include box();
+    width: 60%;
+    text-align: center;
+    margin: 10px auto;
+    flex-direction: column;
+    padding: 15px;
+
+    h2 {
+      @include title();
+    }
+
+    &__text {
+      margin: auto;
+      text-align: justify;
+      font-size: 1.2em;
+    }
+  } 
+
+  &__skills {
+    @include box();
+    @include content(column);
+    width: 35%;
+    margin: 10px auto;
+    flex-direction: column;
+
+    h2 {
+     @include title();
+    }
+
+    ul li{
+      font-size: 1.2em;
+    }
+  }
+}
+
+/*portfolio*/
+.portfolio{
+@include content(column);
+height: auto;
+
+    &__title{
+        @include title()
+    }
+
+    &__box{
+        @include content();
+        @include box();
+        height: auto;
+        padding: 15px;
+    
+
+       .image{
+           width: 200px;
+           text-align: center;
+        img{
+            width: 190px;
+            height: 80%; 
+            margin: 15px auto;
+            cursor: pointer;
+            border-radius: 15px;
+            transition: 500ms ease-in-out;
+        }
+
+        img:hover{
+            transform: scale(1.1);
+        }
+
+        a{
+            @include button;
+        }
+       }
+
+       .description{
+           text-align: left;
+           width: 70%;
+
+           h3{
+               text-align: left
+           }
+
+           p{
+               text-align: left;
+           
+            span{
+                color: $purple;
+                font-weight: bold;
+            }
+            }
+
+           a{
+               @include button();
+           }
+       }
+    }
+
+}
+
+
+
+/*github*/
+.github {
+  @include box;
+  width: 80%;
+  margin: 50px auto;
+
+  h2 {
+   @include title;
+  }
+
+  .calendar {
+    width: 80%;
+    margin: 15px auto;
+  }
+}
+
+/*testimonies*/
+.testimonies {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+  line-height: 2em;
+  text-align: left;
+
+  &__title {
+   @include title;
+  }
+
+  &__text {
+    margin: 15px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+
+    &__sample{
+      text-align: left;
+      width: auto;
+      font-size: 1.2em;
+      @include box;
+      padding: 10px;
+      margin: 15px;
+      font-weight: 500 ;
+
+      span{
+          font-weight: bold;
+          font-size: 1em;
+      }
+    }
+  }
+}
+
+/*contact*/
+.contact {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__title {
+   @include title;
+    
+  }
+
+  &__form {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    input {
+      margin: 5px auto;
+      width: 80%;
+      text-align: left;
+    }
+
+    textarea {
+      width: 80%;
+      margin: 5px auto;
+      height: 200px;
+      text-align: left;
+      font-size: 1.2em;
+    }
+
+    .button-submit {
+      @include button;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .button-submit :hover {
+      font-weight: bold;
+    }
+  }
+}
+/*footer*/
+.footer {
+  background-color: #593e8b;
+  margin: 30px auto 0 auto;
+  padding-top: 15px;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &__infos {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      margin: auto;
+      font-size: 1.4em;
+      color: white;
+      border-bottom: 1px solid white;
+      width: 100%;
+    }
+
+    &__profession {
+      cursor: pointer;
+      color: white;
+      margin: 10px auto;
+    }
+
+    ul {
+      margin: 0 auto;
+
+      li {
+        display: inline;
+
+        a i {
+          color: white;
+          cursor: pointer;
+          font-size: 1.5em;
+          transition: 500ms ease-in-out;
+          margin: 0 10px auto auto;
+        }
+
+        a i:hover {
+          border-bottom: 1px white solid;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  &__links {
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+
+    li {
+      margin: auto;
+      color: white;
+    }
+
+    li:hover {
+      color: white;
+      border-bottom: 1px white solid;
+    }
+    h4 {
+      color: white;
+      font-size: 1.4em;
+      margin-bottom: 5px;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+}
+
+/* max 1024px */
+@media screen and (max-width: 1024px) {
+  .header {
+    label {
+      display: block;
+      color: white;
+      padding: 12px 0px;
+    }
+
+    ul {
+      display: none;
+
+      li {
+        width: 100%;
+
+        a {
+          width: 100%;
+          padding: 10px 0px;
+        }
+      }
+
+      li:hover a {
+        padding: 10px 0px;
+      }
+    }
+  }
+  /*infos*/
+  .infos {
+    margin-bottom: 0;
+    &__text {
+      line-height: 1.9em;
+    }
+  }
+
+  /*profile*/
+  .about {
+    width: 80%;
+    margin: 5px auto;
+
+    &__skills {
+      h2 {
+        margin: 20px auto 5px auto;
+      }
+    }
+  }
+
+  /*portfolio*/
+  .portfolio {
+    width: 95%;
+    margin: auto;
+  }
+
+
+  /*github*/
+  .github {
+    width: 90%;
+
+    h2 {
+      margin: auto;
+    }
+  }
+
+  /*testimonies*/
+  .testimonies {
+    &__title {
+      margin: 30px auto 10px auto;
+    }
+    &__text {
+      width: 90%;
+      margin: auto;
+
+      &__sample{
+        margin-right: 15px;
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+
+  /*contact*/
+  .contact {
+    width: 95%;
+  }
+}
+
+/* max 768px */
+@media screen and (max-width: 768px) {
+  /*infos*/
+  .infos {
+    width: 90%;
+    line-height: 1.9em;
+  }
+
+  /*about*/
+  .about{
+    @include content (column);
+    width: 90%;
+     
+      &__profile{
+          width: 100%;
+      }
+
+      &__skills{
+        @include content (column);
+        width: 100%;
+      }
+  }
+
+  /*portfolio*/
+  .portfolio{
+      width: 90%;
+
+      &__box{
+          width: 100%;
+          padding: 10px;
+          line-height: 1em;
+
+          .image{
+              width: 150px;
+          }
+
+        .description{
+            padding-left: 10px;
+            padding-bottom: 10px;
+
+            h3{
+                font-size: 1.4em;
+            }
+        }          
+      }
+  }
+
+  /*github*/
+  .github {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+
+    .calendar {
+      width: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
+  }
+
+  /*testimonies*/
+  .testimonies {
+    margin: auto;
+    width: 95%;
+    &__title {
+      margin: 30px auto 5px auto;
+    }
+    &__text {
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+
+  /*contact*/
+  .contact {
+    margin: 20px auto;
+  }
+}
+
+/* max 576px */
+@media screen and (max-width: 576px) {
+ body{
+   width: 100%;
+   margin: auto;
+ }
+ .infos {
+    flex-direction: column;
+    width: auto;
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+
+    &__image{
+        text-align: center;
+    }
+
+    &__text {
+      margin: 0 auto;
+      text-align: center;
+
+      h1 {
+        margin-bottom: 5px;
+        margin: 0px auto;
+        width: 100%;
+        text-align: center;
+      }
+
+      p {
+        margin: 5px auto;
+      }
+
+      ul{
+          text-align: center;
+
+          li{
+            text-align: center;
+  
+            a{
+                margin: auto;
+                text-align: center;
+  
+                i{
+                    margin: auto;
+                    text-align: center;
+                }
+            }
+        }
+      }
+    }
+  }
+
+  /*profile & skills*/
+  .about {
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    line-height: 2em;
+    margin: 20px auto;
+
+    &__profile {
+      width: 100%;
+      margin: auto 0 auto 0;
+    }
+
+    h2{
+      font-size: 1.2em;
+      margin: 20px auto 10px auto;
+    }
+  }
+
+  /*portfolio*/
+  .portfolio {
+    width: 90%;
+    flex-direction: column;
+    height: max-content;
+
+    h2{
+      font-size: 1.2em;
+    }
+
+    &__box{
+        @include content(column);
+        text-align: center;
+        width: 100%;
+
+        .image{
+            text-align: center;
+            margin: auto;
+            width: 250px;
+        }
+
+        .description{
+            width: 100%;
+            line-height: 1.1em;
+            text-align: center;
+
+            p{
+                width: 100%;
+            }
+            a{
+                margin: 10px auto 10px auto;
+            }
+        }        
+    }
+  }
+
+
+  /*github*/
+  .github {
+    margin: 0 auto;
+    width: 100%;
+    h2 {
+      margin: 10px auto;
+      font-size: 1.2em;
+    }
+
+    .calendar{
+        width: 100%;
+    }
+  }
+
+  /*testimonies*/
+  .testimonies {
+    margin: 30px auto;
+    h2 {
+      margin: 50px auto 0 auto;
+      font-size: 1.2em;
+    }
+
+    &__text {
+      flex-direction: column;
+      width: 90%;
+      margin: 0 auto;
+
+      &__sample {
+        margin: 10px auto;
+      }
+    }
+  }
+
+  /*github*/
+  .github {
+    width: 90%;
+    margin: auto;
+    h2 {
+      margin: 10px auto;
+      font-size: 1.2em;
+    }
+  }
+
+  /*contact*/
+  .contact {
+    h2{
+      font-size: 1.2em;
+    }
+    form {
+      width: 100%;
+    }
+  }
+
+  /*footer*/
+  .footer {
+    flex-direction: column;
+  }
+}
+
+/* max 576px */
+@media screen and (min-width: 350px) and (max-width: 575px) {
+    body{
+      width: 100%;
+      margin: auto;
+    }
+  
+   
+     /*portfolio*/
+     .portfolio {
+       width: 90%;
+       flex-direction: column;
+       height: max-content;
+   
+       h2{
+         font-size: 1.2em;
+       }
+   
+       &__box{
+           @include content(column);
+           text-align: center;
+           width: 100%;
+   
+           .image{
+               text-align: center;
+               margin: auto;
+               width: 250px;
+           }
+   
+           .description{
+               width: 100%;
+               line-height: 1em;
+               text-align: center;
+   
+               p{
+                   width: 100%;
+                   font-size: 1em;
+               }
+               a{
+                   margin: 10px auto 10px auto;
+               }
+           }        
+       }
+     }
+   
+   
+     /*github*/
+     .github {
+       margin: 0 auto;
+       width: 100%;
+       h2 {
+         margin: 10px auto;
+         font-size: 1.2em;
+       }
+   
+       .calendar{
+           width: 100%;
+       }
+     }
+   
+     /*testimonies*/
+     .testimonies {
+       margin: 30px auto;
+       h2 {
+         margin: 50px auto 0 auto;
+         font-size: 1.2em;
+       }
+   
+       &__text {
+         flex-direction: column;
+         width: 90%;
+         margin: 0 auto;
+   
+         &__sample {
+           margin: 10px auto;
+         }
+       }
+     }
+   
+     /*github*/
+     .github {
+       width: 90%;
+       margin: auto;
+       h2 {
+         margin: 10px auto;
+         font-size: 1.2em;
+       }
+     }
+   
+     /*contact*/
+     .contact {
+       h2{
+         font-size: 1.2em;
+       }
+       form {
+         width: 100%;
+       }
+     }
+   
+     /*footer*/
+     .footer {
+       flex-direction: column;
+     }
+   }
+
+
